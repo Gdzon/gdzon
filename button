@@ -1,0 +1,25 @@
+# КнОпОчКа
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Кнопка</title>
+  <style>
+   .c {
+    border: 1px solid #333; /* Рамка */
+    display: inline-block;
+	text-decoration: none; /* Убираем подчеркивание */
+    padding: 5px 15px; /* Поля */
+    color: #000; /* Цвет текста */
+  }
+   .c:hover {
+    background: #FFFF00;
+    color: #FF00FF;
+   }
+  </style>
+ </head>
+ <body>
+   <a href="https://www.youtube.com/watch?v=sbcp_eKYoSM" class="c">Не нажимай!</a>
+ </body>
+</html>

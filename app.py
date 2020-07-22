@@ -1,5 +1,6 @@
 import os, re
-from models import db, Books
+from sqlalchemy import text
+from models import Books, db
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, render_template, url_for, request, session, g, redirect, abort
 
@@ -17,7 +18,7 @@ def index():
 @app.route("/<grade>/<subject>")
 def table_to_books(grade, subject):
     if re.match(r"\d[0,1]?-klass", grade) and subject in subjects:
-        return "hello!"    # render_template('.html', grade=grade, subject=subject)
+        return "gdz"    # render_template('.html', title=title, grade=grade, subject=subject)
     else:
         abort(404)
 

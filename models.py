@@ -4,7 +4,8 @@ db = SQLAlchemy(session_options={"autoflush": False})
 
 
 class Books(db.Model):
-    books_id = db.Column(db.Integer, primary_key=True)
+    book_id = db.Column(db.String, primary_key=True)
+    book_name = db.Column(db.String)
     grade = db.Column(db.Integer)
     cover = db.Column(db.String)
     tasks = db.Column(db.String)

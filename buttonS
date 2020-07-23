@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>КнОпАчКи</title>
+<style>
+h2 {
+  font-family: monospace;
+  font-size: 25;
+  color: #4CAF50;
+  text-indent: 55px;
+  
+}
+
+.btn-group .button {
+  background-color: #4CAF50;
+  border: 1px solid green;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+  width: 200px;
+  display: block;
+  color: white; 
+}
+  
+.btn-group .button:not(:last-child) {
+  border-bottom: none;
+}
+
+.btn-group .button:hover {
+  background-color: pink; 
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+</style>
+</head>
+<body>
+
+<h2>КнОпАчКи</h2>
+
+<div class="btn-group">
+  <button class="button"><a href="https://gdz.ru/">1 класс</button>
+  <button class="button"><a href="https://gdz.ru/">2 класс</button>
+  <button class="button"><a href="https://gdz.ru/">3 класс</button>
+  <button class="button"><a href="https://gdz.ru/">4 класс</button>
+  <button class="button"><a href="https://gdz.ru/">5 класс</button>
+  <button class="button"><a href="https://gdz.ru/">6 класс</button>
+  <button class="button"><a href="https://gdz.ru/">7 класс</button>
+  <button class="button"><a href="https://gdz.ru/">8 класс</button>
+  <button class="button"><a href="https://gdz.ru/">9 класс</button>
+  <button class="button"><a href="https://gdz.ru/">10 класс</button>
+  <button class="button"><a href="https://gdz.ru/">11 класс</button>
+ 
+ /* Можно и не добавлять ссылку к каждой кнопке */
+ 
+</div>
+
+</body>
+</html>

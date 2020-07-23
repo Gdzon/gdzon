@@ -44,18 +44,16 @@ a {
 
 <div class="btn-group">
   <button class="button"><a href="https://gdz.ru/">1 класс</button>
-  <button class="button"><a href="https://gdz.ru/">2 класс</button>
-  <button class="button"><a href="https://gdz.ru/">3 класс</button>
-  <button class="button"><a href="https://gdz.ru/">4 класс</button>
-  <button class="button"><a href="https://gdz.ru/">5 класс</button>
-  <button class="button"><a href="https://gdz.ru/">6 класс</button>
-  <button class="button"><a href="https://gdz.ru/">7 класс</button>
-  <button class="button"><a href="https://gdz.ru/">8 класс</button>
-  <button class="button"><a href="https://gdz.ru/">9 класс</button>
-  <button class="button"><a href="https://gdz.ru/">10 класс</button>
-  <button class="button"><a href="https://gdz.ru/">11 класс</button>
- 
- /* Можно и не добавлять ссылку к каждой кнопке */
+  <button class="button">2 класс</button>
+  <button class="button">3 класс</button>
+  <button class="button">4 класс</button>
+  <button class="button">5 класс</button>
+  <button class="button">6 класс</button>
+  <button class="button">7 класс</button>
+  <button class="button">8 класс</button>
+  <button class="button">9 класс</button>
+  <button class="button">10 класс</button>
+  <button class="button">11 класс</button>
  
 </div>
 

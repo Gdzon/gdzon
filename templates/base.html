@@ -3,8 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
+    <link type="text/css" href="{{ url_for('static', filename='css/global.css') }}" rel="stylesheet"/>
 </head>
 <body>
+
+<header><h1>GDZon</h1></header>
+
+<ul class="nav">
+    <li><a>1 класс</a>
+        <ul>
+            <li><a href="/1-klass/matematika">Математика</a></li>
+        </ul>
+    </li>
+
+    <li><a>2 класс</a>
+        <ul>
+            <li><a href="/2-klass/matematika">Математика</a></li>
+            <li><a href="/2-klass/russkij-yazik">Русский язык</a></li>
+        </ul>
+    </li>
+</ul>
+
+<div class="content">
+{% block content %}
+
+
+{% endblock %}
+</div>
+
 
 </body>
 </html>

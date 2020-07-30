@@ -12,7 +12,7 @@ db.init_app(app)
 
 @app.route('/')
 def index():
-    return "hello!"
+    return render_template('index.html', title="hello!")
 
 
 @app.route('/<grade>/<subject>/<book>')
@@ -58,4 +58,4 @@ if __name__ == '__main__':
 
 
 
-subjects = ["matematika", "russkij_yazik"]
+subjects = ["matematika"]

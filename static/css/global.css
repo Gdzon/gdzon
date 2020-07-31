@@ -23,7 +23,7 @@ ul.nav ul {
     list-style: none;
 }
 ul.nav li:hover ul{
-    display: block;
+    display: table-row-group;
 }
 ul.nav a {
     display: block;

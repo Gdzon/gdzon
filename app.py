@@ -1,14 +1,22 @@
+# import
+
 import os, re
 from sqlalchemy import text
 from models import Books, db
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, render_template, url_for, request, session, g, redirect, abort
+from flask_navigation import Navigation
+
+
+# config
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///first.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
+
+# app.ROUTE decorators
 
 @app.route('/')
 def index():
@@ -24,6 +32,7 @@ def book_tasks(grade, subject, book):
             if book_info:
                 return render_template('',
                                        book_name=book_info.book_name,
+                                       subject=subject,
                                        grade=book_info.grade,
                                        cover=book_info.cover,
                                        tasks=book_info.tasks,
@@ -53,9 +62,10 @@ def table_to_books(grade, subject):
         abort(404)
 
 
+#
+
 if __name__ == '__main__':
     app.run(debug=True)
-
 
 
 subjects = ["matematika"]

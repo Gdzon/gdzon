@@ -22,14 +22,13 @@ ul.nav ul {
     display: none;
     list-style: none;
 }
-ul.nav li:hover ul{
-    display: table-row-group;
-}
 ul.nav a {
     display: block;
-    width: 7em;
-    height: 1em;
+    width: 8em;
+    height: 20px;
     padding: 4px;
+    text-align: left;
+    padding-left: 7%;
     background-color: lightskyblue;
     border-top: 1px solid black;
     border-right: 1px solid black;

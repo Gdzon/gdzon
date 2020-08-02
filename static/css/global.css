@@ -15,10 +15,12 @@ header {
 ul.nav {
     float: left;
     padding-inline-start: 15px;
-    list-style: none;
+    list-style-type: none;
     margin: 15px;
 }
 ul.nav ul {
+    width: 95%;
+    margin: 0;
     display: none;
     list-style: none;
 }
@@ -37,18 +39,7 @@ ul.nav a {
     color: black;
 }
 ul.nav ul > li > a {
-    display: table-row-group;
-    width: 8em;
-    height: 20px;
-    padding: 4px;
-    text-align: left;
-    padding-left: 7%;
     background-color: dodgerblue;
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
-    text-decoration: none;
-    color: black;
 }
 ul.nav li:last-child a {
     border-bottom: 1px solid #333;

@@ -2,7 +2,7 @@
 
 import os, re
 from sqlalchemy import text
-from models import Books, db
+from models import Books, db, addBook
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, render_template, url_for, request, session, g, redirect, abort
 from flask_navigation import Navigation
@@ -27,11 +27,12 @@ def index():
 def book_tasks(grade, subject, book):
     if re.match(r"\d[0,1]?-klass", grade) and subject in subjects:
         try:
-            book_info = Books.query.filter_by(book_id=book).first()
+            book_info = Books.query.filter_by(id_=book).first()
 
             if book_info:
                 return render_template('',
-                                       book_name=book_info.book_name,
+                                       page_title=book_info.title,
+                                       book_title=book_info.title,
                                        subject=subject,
                                        grade=book_info.grade,
                                        cover=book_info.cover,
@@ -50,12 +51,10 @@ def table_to_books(grade, subject):
 
     if re.match(r"\d[0,1]?-klass", grade) and subject in subjects:
         try:
-            books_list = Books.query.filter_by(grade=grade, subject=subject).all()
-            return "gdz"    ''' render_template('.html', 
-                                                title=title, 
-                                                grade=grade, 
-                                                subject=subject,
-                                                books_list=books_list) '''
+            books_list = Books.query.filter_by(grade=grade[:len(grade)-6], subject=subject).all()
+            return render_template('booksList.html',
+                                    page_title=f"Книги {grade} класс {subject}",
+                                    books_list=books_list)
         except Exception as e:
             print("Ошибка получения списка книг: ", str(e))
     else:

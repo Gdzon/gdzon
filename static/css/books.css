@@ -1,0 +1,16 @@
+ul.books-list {
+    columns: 2;
+    list-style-type: none;
+}
+ul.books-list li {
+    display: block;
+    height: 110px;
+    text-align: center;
+}
+ul.books-list a {
+    display: block;
+}
+
+.content {
+
+}

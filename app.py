@@ -20,6 +20,7 @@ db.init_app(app)
 
 @app.route('/')
 def index():
+    #print(len([elem for elem in os.listdir(url_for('static', filename=f'img'))]))
     return render_template('index.html', title="hello!")
 
 
@@ -56,12 +57,12 @@ def book_tasks(grade, subject, book):
                                        subject=subject,
                                        description=book_info.description,
                                        grade=book_info.grade,
-                                       tasks_count=len([elem for elem in os.listdir(url_for('static', filename=fr'img/tasks/{book}'))]),
+                                       tasks_count=5,
                                        author=book_info.author)
             else: abort(404)
 
         except Exception as e:
-            print("Ошибка получения книги: ", str(e))
+            print("Ошибка получения книги: " + str(e))
 
     else: abort(404)
 
@@ -71,10 +72,13 @@ def table_to_books(grade, subject):
 
     if re.match(r"\d[0,1]?-klass", grade) and subject in subjects:
         try:
-            books_list = Books.query.filter_by(grade=grade[:len(grade)-6], subject=subject).all()
+            grade=grade[:len(grade)-6]
+            books_list = Books.query.filter_by(grade=grade, subject=subject).all()
             return render_template('booksList.html',
                                     page_title=f"Книги {grade} класс {subject}",
-                                    books_list=books_list)
+                                    books_list=books_list,
+                                    grade=grade,
+                                    subject=subject)
         except Exception as e:
             print("Ошибка получения списка книг: ", str(e))
     else:

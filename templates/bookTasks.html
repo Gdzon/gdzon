@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {{ super() }}
+
+    <p id="book-title">{{ book_title }}</p>
+    <article id="book-description"> {{ description }} </article>
+    <img alt="{{ book_title }}" src="{{ cover }}">
+
+    <ul id="tasksList">
+        {% for i in range(tasks_num) %}
+            <li><a class="taskButton" href="{{ tasks }}/{{ i }}">{{ i }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

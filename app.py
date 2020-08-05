@@ -20,6 +20,7 @@ db.init_app(app)
 
 @app.route('/')
 def index():
+    print()
     return render_template('index.html', title="hello!")
 
 
@@ -34,9 +35,11 @@ def book_tasks(grade, subject, book):
                                        page_title=book_info.title,
                                        book_title=book_info.title,
                                        subject=subject,
+                                       description=book_info.description,
                                        grade=book_info.grade,
                                        cover=book_info.cover,
                                        tasks=book_info.tasks,
+                                       tasks_num=len([elem for elem in os.listdir(book_info.tasks)]),
                                        author=book_info.author)
             else: abort(404)
 

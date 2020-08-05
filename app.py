@@ -20,9 +20,27 @@ db.init_app(app)
 
 @app.route('/')
 def index():
-    print()
     return render_template('index.html', title="hello!")
 
+
+@app.route('/<grade>/<subject>/<book>/<task>')
+def show_task(grade, subject, book, task):
+    if re.match(r"\d[0,1]?-klass", grade) and subject in subjects:
+        try:
+            book_info = Books.query.filter_by(id_=book).first()
+            if book_info:
+                return render_template('',
+                                       page_title=book_info.title,
+                                       id_=book,
+                                       task_num=task,
+                                       author=book_info.author,
+                                       book_title=book_info.title)
+
+        except Exception as e:
+            print("Ошибка загрузки задания: " + str(e))
+
+    else:
+        abort(404)
 
 @app.route('/<grade>/<subject>/<book>')
 def book_tasks(grade, subject, book):
@@ -31,15 +49,14 @@ def book_tasks(grade, subject, book):
             book_info = Books.query.filter_by(id_=book).first()
 
             if book_info:
-                return render_template('',
+                return render_template('bookTasks.html',
+                                       id_=book,
                                        page_title=book_info.title,
                                        book_title=book_info.title,
                                        subject=subject,
                                        description=book_info.description,
                                        grade=book_info.grade,
-                                       cover=book_info.cover,
-                                       tasks=book_info.tasks,
-                                       tasks_num=len([elem for elem in os.listdir(book_info.tasks)]),
+                                       tasks_count=len([elem for elem in os.listdir(url_for('static', filename=fr'img/tasks/{book}'))]),
                                        author=book_info.author)
             else: abort(404)
 

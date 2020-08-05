@@ -3,13 +3,13 @@
 {% block content %}
     {{ super() }}
 
-    <p id="book-title">{{ book_title }}</p>
-    <article id="book-description"> {{ description }} </article>
-    <img alt="{{ book_title }}" src="{{ cover }}">
+    <p id="bookTitle">{{ book_title }}</p>
+    <article id="bookDescription"> {{ description }} </article>
+    <img id="bookCover" alt="{{ book_title }}" src="{{ url_for('static', filename='img/covers/') }}{{ id_ }}">
 
     <ul id="tasksList">
-        {% for i in range(tasks_num) %}
-            <li><a class="taskButton" href="{{ tasks }}/{{ i }}">{{ i }}</a></li>
+        {% for i in range(tasks_count) %}
+            <li><a class="taskButton" href="{{ grade }}-klass/{{ subject }}/{{ id_ }}/{{ i }}">{{ i }}</a></li>
         {% endfor %}
     </ul>
 {% endblock %}

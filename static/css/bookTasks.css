@@ -1,0 +1,13 @@
+.taskButton {
+    display: block;
+    background-color: aliceblue;
+    border: 1px cornflowerblue;
+    border-style: solid;
+    width: 30px;
+    height: 20px;
+    text-align: center;
+}
+
+#tasksList {
+    list-style-type: none;
+}

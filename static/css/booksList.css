@@ -3,15 +3,19 @@ ul.books-list {
     height: max-content;
     background-color: snow;
     list-style-type: none;
-    padding-top: 30px;
 }
 ul.books-list li {
     display: flex;
-    height: 70px;
+    height: 120px;
+    overflow: auto;
     text-align: center;
 }
-ul.books-list a {
+#bookTitle {
     margin: auto;
+}
+#bookCover {
+    height: 120px;
+    width: 100px;
 }
 
 .content {

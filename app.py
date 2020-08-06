@@ -20,17 +20,16 @@ db.init_app(app)
 
 @app.route('/')
 def index():
-    #print(len([elem for elem in os.listdir(url_for('static', filename=f'img'))]))
     return render_template('index.html', title="hello!")
 
 
-@app.route('/<grade>/<subject>/<book>/<task>')
+@app.route('/<grade>/<subject>/<book>/<int:task>')
 def show_task(grade, subject, book, task):
     if re.match(r"\d[0,1]?-klass", grade) and subject in subjects:
         try:
             book_info = Books.query.filter_by(id_=book).first()
             if book_info:
-                return render_template('',
+                return render_template('task.html',
                                        page_title=book_info.title,
                                        id_=book,
                                        task_num=task,
@@ -50,14 +49,15 @@ def book_tasks(grade, subject, book):
             book_info = Books.query.filter_by(id_=book).first()
 
             if book_info:
+
                 return render_template('bookTasks.html',
                                        id_=book,
                                        page_title=book_info.title,
                                        book_title=book_info.title,
                                        subject=subject,
                                        description=book_info.description,
-                                       grade=book_info.grade,
-                                       tasks_count=5,
+                                       grade=str(book_info.grade),
+                                       tasks_count=len(os.listdir(os.getcwd()+'/static/img/tasks/testidbook')),
                                        author=book_info.author)
             else: abort(404)
 

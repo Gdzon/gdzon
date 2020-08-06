@@ -20,7 +20,7 @@ db.init_app(app)
 
 @app.route('/')
 def index():
-    return render_template('index.html', title="hello!")
+    return render_template('index.html', title="hello!", booksExist=booksExist, str_nums=str_nums)
 
 
 @app.route('/<grade>/<subject>/<book>/<int:task>')
@@ -92,3 +92,10 @@ if __name__ == '__main__':
 
 
 subjects = ["matematika"]
+
+#for index.html
+booksExist = {
+    "Класс": [],
+    "matematika": ["no","no","no","no","yes","no","no","no","no","no","no"]
+}
+str_nums = ["0","1","2","3","4","5","6","7","8","9","10","11"]

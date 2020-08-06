@@ -1,11 +1,45 @@
-{%  extends 'base.html' %}
+{% extends 'base.html' %}
+
+{% block add_head %}
+    {{ super() }}
+
+    <link type="text/css" href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet"/>
+{% endblock %}
 
 {% block content %}
-{{ super() }}
+    {{ super() }}
 
     <article>
-        *таблица*
         РАБОТАЕТ ТОЛЬКО 5 КЛАСС МАТЕМАТИКА С СИРЕНЬЮ :)
     </article>
+
+    <table id="indexTable">
+        {% for subject in booksExist %}
+            <tr>
+                {% for class in range(12) %}
+
+                    {% if class == 0 %}
+                        <th>{{ subject }}</th>
+                    {% else %}
+
+                        {% if subject == "Класс" %}
+                            <th>{{ class }}</th>
+                        {% endif %}
+
+                        {% if subject != "Класс" %}
+                            <td>
+                                <a href="{{ url_for('table_to_books', grade=str_nums[class]+"-klass", subject=subject) }}">
+                                    <img alt="" width="15px" height="15px"
+                                         src="{{ url_for('static', filename='img/'+booksExist.get(subject)[class-1]+'.png') }}">
+                                </a>
+                            </td>
+                        {% endif %}
+
+                    {% endif %}
+
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
 
 {% endblock %}

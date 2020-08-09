@@ -85,10 +85,6 @@ def table_to_books(grade, subject):
         abort(404)
 
 
-#
-
-if __name__ == '__main__':
-    app.run(debug=True)
 
 
 subjects = ["matematika"]
@@ -99,3 +95,8 @@ booksExist = {
     "matematika": ["no","no","no","no","yes","no","no","no","no","no","no"]
 }
 str_nums = ["0","1","2","3","4","5","6","7","8","9","10","11"]
+
+#
+
+if __name__ == '__main__':
+    app.run(debug=True)

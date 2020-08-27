@@ -2,4 +2,9 @@
     padding-top: 10px;
     width: 100%;
     text-align: center;
+    border-collapse: separate;
+    border-spacing: 0 1em;
+}
+#indexTable td {
+    border-left: 1px solid black;
 }

@@ -10,7 +10,7 @@
     {{ super() }}
 
     <article>
-        РАБОТАЕТ ТОЛЬКО 5 КЛАСС МАТЕМАТИКА С СИРЕНЬЮ :)
+
     </article>
 
     <table id="indexTable">
@@ -19,11 +19,11 @@
                 {% for class in range(12) %}
 
                     {% if class == 0 %}
-                        <th>{{ subject }}</th>
+                        <th width="12%">{{ booksExist[subject][-1] }}</th>
                     {% else %}
 
                         {% if subject == "Класс" %}
-                            <th>{{ class }}</th>
+                            <th width="8%">{{ class }}</th>
                         {% endif %}
 
                         {% if subject != "Класс" %}

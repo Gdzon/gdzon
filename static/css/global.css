@@ -2,13 +2,30 @@ body {
     margin: 0;
     margin-left: 10%;
     margin-right: 10%;
+    background: url("/static/img/background.jpg");
+    z-index: 6;
+    position: relative;
+}
+
+#body-div{
+    background: mintcream;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+}
+
+#footer {
+    height: 55px;
+    background: gainsboro;
+    bottom: 0;
 }
 
 header {
     margin: 12px;
     margin-bottom: 7px;
-    height: 55px;
+    height: 60px;
     display: flex;
+    top: 0;
 }
 header a{
     margin-right: 2%;

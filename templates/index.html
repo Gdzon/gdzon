@@ -29,7 +29,7 @@
                         {% if subject != "Класс" %}
                             <td>
                                 <a href="{{ url_for('table_to_books', grade=str_nums[class]+"-klass", subject=subject) }}">
-                                    <img alt="" width="15px" height="15px"
+                                    <img alt="" width="20px" height="20px"
                                          src="{{ url_for('static', filename='img/'+booksExist.get(subject)[class-1]+'.png') }}">
                                 </a>
                             </td>

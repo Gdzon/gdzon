@@ -1,21 +1,36 @@
 ul.books-list {
     columns: 2;
     height: max-content;
-    background-color: snow;
     list-style-type: none;
 }
 ul.books-list li {
     display: flex;
-    height: 120px;
+    height: 124px;
     overflow: auto;
-    text-align: center;
+
+    margin-bottom: 13px;
 }
-#bookTitle {
-    margin: auto;
+ul.books-list :hover{
+    background: lavenderblush;
+}
+#bookAuthor {
+    margin-left: 1%;
+    text-decoration: none;
+    float: left;
+}
+#bookAuthor p{
+    color: #333333;
+    margin: 0;
+    margin-top: 5px;
+    font-size: 20px;
 }
 #bookCover {
     height: 120px;
     width: 100px;
+}
+
+#pub_h {
+
 }
 
 .content {

@@ -8,16 +8,21 @@ body {
 }
 
 #body-div{
-    background: mintcream;
+    background: white;
     position: absolute;
     z-index: 3;
     width: 100%;
+    margin-top: 10px;
 }
 
-#footer {
+footer {
     height: 55px;
-    background: gainsboro;
+    background: whitesmoke;
     bottom: 0;
+    position: absolute;
+    margin-bottom: -55px;
+    width: 100%;
+    display: flex;
 }
 
 header {
@@ -25,6 +30,8 @@ header {
     margin-bottom: 7px;
     height: 60px;
     display: flex;
+    position: relative;
+    background: lavenderblush;
     top: 0;
 }
 header a{
@@ -50,10 +57,12 @@ header a{
 
 .content {
     float: right;
-    width: 75%;
+    width: 77%;
     height: max-content;
-    margin-right: 16px;
+    margin-right: 1%;
+    position: relative;
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 ul.nav {
@@ -61,6 +70,7 @@ ul.nav {
     padding-inline-start: 15px;
     list-style-type: none;
     margin: 8px;
+    position: relative;
 }
 ul.nav ul {
     width: 95%;

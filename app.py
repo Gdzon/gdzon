@@ -58,7 +58,8 @@ def book_tasks(grade, subject, book):
                                        description=book_info.description,
                                        grade=str(book_info.grade),
                                        tasks_count=len(os.listdir(os.getcwd()+'/static/img/tasks/testidbook')),
-                                       author=book_info.author)
+                                       author=book_info.author,
+                                       pub_h = book_info.pub_h)
             else: abort(404)
 
         except Exception as e:

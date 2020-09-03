@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 8%;
+    margin-right: 8%;
     background: url("/static/img/background.jpg");
     z-index: 6;
     position: relative;

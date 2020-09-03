@@ -11,6 +11,7 @@
 
 #tasksList {
     list-style-type: none;
+    padding-inline-start: 0;
 }
 #bookCover {
     width: 90px;

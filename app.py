@@ -20,7 +20,10 @@ db.init_app(app)
 
 @app.route('/')
 def index():
-    return render_template('index.html', title="hello!", booksExist=booksExist, str_nums=str_nums)
+    #db.drop_all()
+    #db.create_all()
+    #addBook("testidbook", "matematika", "kniga", 5, "Пушкин", "Издательство", "задачник", 1)
+    return render_template('index.html', title="hello!", booksExist=booksExist, str_nums=str_nums, page_title="ГДЗон")
 
 
 @app.route('/<grade>/<subject>/<book>/<int:task>')
@@ -30,11 +33,9 @@ def show_task(grade, subject, book, task):
             book_info = Books.query.filter_by(id_=book).first()
             if book_info:
                 return render_template('task.html',
-                                       page_title=book_info.title,
-                                       id_=book,
-                                       task_num=task,
-                                       author=book_info.author,
-                                       book_title=book_info.title)
+                                       page_title=f"Задание {task}. {book_info.author}. {booksExist[subject][-1]}: {grade[:-6]} класс",
+                                       book_info=book_info,
+                                       task_num=task)
 
         except Exception as e:
             print("Ошибка загрузки задания: " + str(e))
@@ -49,17 +50,11 @@ def book_tasks(grade, subject, book):
             book_info = Books.query.filter_by(id_=book).first()
 
             if book_info:
-
+                book_info.tasks_count += 1
+                book_info.grade = str(book_info.grade)
                 return render_template('bookTasks.html',
-                                       id_=book,
-                                       page_title=book_info.title,
-                                       book_title=book_info.title,
-                                       subject=subject,
-                                       description=book_info.description,
-                                       grade=str(book_info.grade),
-                                       tasks_count=len(os.listdir(os.getcwd()+'/static/img/tasks/testidbook')),
-                                       author=book_info.author,
-                                       pub_h = book_info.pub_h)
+                                       page_title=f"{book_info.author}. {booksExist[subject][-1]}: {grade[:-6]} класс",
+                                       book_info=book_info)
             else: abort(404)
 
         except Exception as e:
@@ -76,7 +71,7 @@ def table_to_books(grade, subject):
             grade=grade[:len(grade)-6]
             books_list = Books.query.filter_by(grade=grade, subject=subject).all()
             return render_template('booksList.html',
-                                    page_title=f"Книги {grade} класс {subject}",
+                                    page_title=f"{booksExist[subject][-1]}: {grade} класс",
                                     books_list=books_list,
                                     grade=grade,
                                     subject=subject)

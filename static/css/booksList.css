@@ -7,21 +7,18 @@ ul.books-list li {
     display: flex;
     height: 124px;
     overflow: auto;
-
     margin-bottom: 13px;
 }
 ul.books-list :hover{
     background: lavenderblush;
 }
 #bookAuthor {
-    margin-left: 1%;
-    text-decoration: none;
     float: left;
+    text-decoration: none;
 }
 #bookAuthor p{
     color: #333333;
     margin: 0;
-    margin-top: 5px;
     font-size: 20px;
 }
 #bookCover {
@@ -29,8 +26,24 @@ ul.books-list :hover{
     width: 100px;
 }
 
-#pub_h {
+.book-info {
+    margin-top: 10px;
+    padding-inline-start: 0;
+    margin-left: 2%;
+}
 
+#books-list-title{
+    margin-left: 5%;
+    font-size: 20px;
+}
+
+#pub_h {
+    text-decoration: none;
+}
+#pub_h p{
+    font-size: 15px;
+    margin: 0;
+    color: darkgrey;
 }
 
 .content {

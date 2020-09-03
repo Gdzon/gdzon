@@ -9,13 +9,13 @@
 {% block content %}
     {{ super() }}
 
-    <p id="bookTitle">{{ book_title }}</p>
-    <img id="bookCover" alt="{{ book_title }}" src="{{ url_for('static', filename='img/covers/') }}{{ id_ }}.jpg">
-    <article id="bookDescription"> {{ description }} </article>
+    <p id="bookTitle">{{page_title}}</p>
+    <img id="bookCover" alt="{{ book_info.id_ }}" src="{{ url_for('static', filename='img/covers/') }}{{ book_info.id_ }}.jpg">
+    <article id="bookDescription"> {{ book_info.description }} </article>
 
     <ul id="tasksList">
-        {% for i in range(1, tasks_count+1) %}
-            <li><a class="taskButton" href="{{ url_for('show_task', grade=grade+"-klass", subject=subject, book=id_, task=i) }}">{{ i }}</a></li>
+        {% for i in range(1, book_info.tasks_count) %}
+            <li><a class="taskButton" href="{{ url_for('show_task', grade=book_info.grade+"-klass", subject=book_info.subject, book=book_info.id_, task=i) }}">{{ i }}</a></li>
         {% endfor %}
     </ul>
 {% endblock %}

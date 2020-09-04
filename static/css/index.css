@@ -6,5 +6,11 @@
     border-spacing: 0 7px;
 }
 #indexTable td {
-    border-left: 1px solid black;
+
+}
+.subject-name {
+    text-align: left;
+}
+.form-num {
+    text-align: center;
 }

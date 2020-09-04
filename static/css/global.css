@@ -5,6 +5,8 @@ body {
     background: url("/static/img/background.jpg");
     z-index: 6;
     position: relative;
+
+    font-family: "Gill Sans";
 }
 
 #body-div{
@@ -12,7 +14,8 @@ body {
     position: absolute;
     z-index: 3;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 70px;
 }
 
 footer {
@@ -31,7 +34,7 @@ header {
     height: 60px;
     display: flex;
     position: relative;
-    background: lavenderblush;
+    background: white;
     top: 0;
 }
 header a{
@@ -49,15 +52,30 @@ header a{
     width: 100%;
 }
 #search-input {
-    width: 84%;
+    width: 87%;
+    height: 33px;
+    border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: mediumslateblue;
+    padding-left: 8px;
 }
 #search-button {
-    width: 15%;
+    width: 12%;
+    height: 33px;
+    background: mediumslateblue;
+    border-radius: 3px;
+    border-width: 0;
+    color: white;
+}
+
+#left-column-and-content{
+    overflow: auto;
 }
 
 .content {
     float: right;
-    width: 77%;
+    width: 75%;
     height: max-content;
     margin-right: 1%;
     position: relative;
@@ -65,15 +83,30 @@ header a{
     margin-bottom: 20px;
 }
 
-ul.nav {
+#left-column {
     float: left;
-    padding-inline-start: 15px;
-    list-style-type: none;
+    width: 21%;
+    height: 100%;
     margin: 8px;
+    margin-right: 1%;
+    margin-left: 1.5%;
+    background: mediumslateblue;
+}
+#left-column-list{
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+#left-column-list li{
+}
+
+ul.nav {
+    padding-inline-start: 0;
+    list-style-type: none;
     position: relative;
+    width: 87%;
+    margin: 0 auto;
 }
 ul.nav ul {
-    width: 95%;
     margin: 0;
     display: none;
     list-style: none;
@@ -86,7 +119,6 @@ ul.nav a {
   text-decoration: none;
   font-size: 17px;
   cursor: pointer;
-  width: 130px;
   display: block;
   color: white;
 }
@@ -98,6 +130,9 @@ ul.nav li:last-child a {
 }
 ul.nav a:hover {
     background-color: cornflowerblue;
+}
+ul.nav li > ul > li > a {
+    width: 89%;
 }
 
 

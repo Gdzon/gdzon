@@ -16,21 +16,25 @@
     <table id="indexTable">
         {% for subject in booksExist %}
             <tr>
-                {% for class in range(12) %}
+                {% for form in range(12) %}
 
-                    {% if class == 0 %}
-                        <th width="12%">{{ booksExist[subject][-1] }}</th>
+                    {% if form == 0 %}
+                        <th class="subject-name" width="12%">{{ booksExist[subject][-1] }}</th>
                     {% else %}
 
                         {% if subject == "Класс" %}
-                            <th width="8%">{{ class }}</th>
+                            <th class="form-num" width="8%">{{ form }}</th>
                         {% endif %}
 
                         {% if subject != "Класс" %}
                             <td>
-                                <a href="{{ url_for('table_to_books', grade=str_nums[class]+"-klass", subject=subject) }}">
-                                    <img alt="" width="20px" height="20px"
-                                         src="{{ url_for('static', filename='img/'+booksExist.get(subject)[class-1]+'.png') }}">
+                                <a href="{{ url_for('table_to_books', grade=str_nums[form]+"-klass", subject=subject) }}">
+                                    {% if booksExist.get(subject)[form-1]=="be" %}
+                                    <img alt="" width="26px" height="26px"
+                                         src="{{ url_for('static', filename='img/'+"be"+'.png') }}">
+
+                                    {% else %}
+                                    {% endif %}
                                 </a>
                             </td>
                         {% endif %}

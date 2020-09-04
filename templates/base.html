@@ -16,77 +16,88 @@
         <a class="logo" href="{{ url_for('index') }}"><img alt="GDZon" height="100%" width="100%"
                                                            src="{{ url_for('static', filename='img/logo.png') }}"></a>
         <form class="search">
-            <p><input id="search-input" type="search" name="q" placeholder="Поиск по сайту">
+            <p><input id="search-input" type="search" name="q" placeholder="Русский язык 5 класс">
                 <input id="search-button" type="submit" value="Найти"></p>
         </form>
     </header>
 
-    <ul class="nav">
-        <li><a>1 класс</a>
-            <ul>
-                <li><a href="{{ url_for('table_to_books', grade="1-klass", subject="matematika") }}">Математика</a>
+    <div id="left-column-and-content">
+        <div id="left-column">
+            <ul id="left-column-list">
+
+                <li>
+                    <ul class="nav">
+                        <li><a>1 класс</a>
+                            <ul>
+                                <li><a href="{{ url_for('table_to_books', grade="1-klass", subject="matematika") }}">Математика</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li><a>2 класс</a>
+                            <ul>
+                            </ul>
+                        </li>
+
+                        <li><a>3 класс</a>
+                            <ul>
+                            </ul>
+                        </li>
+
+                        <li><a>4 класс</a>
+                            <ul>
+                            </ul>
+                        </li>
+
+                        <li><a>5 класс</a>
+                            <ul>
+                                <li><a id="www"
+                                       href="{{ url_for('table_to_books', grade="5-klass", subject="matematika") }}">Математика</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li><a>6 класс</a>
+                            <ul>
+                            </ul>
+                        </li>
+
+                        <li><a>7 класс</a>
+                            <ul>
+                            </ul>
+                        </li>
+
+                        <li><a>8 класс</a>
+                            <ul>
+                            </ul>
+                        </li>
+
+                        <li><a>9 класс</a>
+                            <ul>
+                            </ul>
+                        </li>
+
+                        <li><a>10 класс</a>
+                            <ul>
+                            </ul>
+                        </li>
+
+                        <li><a>11 класс</a>
+                            <ul>
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
+
             </ul>
-        </li>
+        </div>
 
-        <li><a>2 класс</a>
-            <ul>
-            </ul>
-        </li>
-
-        <li><a>3 класс</a>
-            <ul>
-            </ul>
-        </li>
-
-        <li><a>4 класс</a>
-            <ul>
-            </ul>
-        </li>
-
-        <li><a>5 класс</a>
-            <ul>
-                <li><a href="{{ url_for('table_to_books', grade="5-klass", subject="matematika") }}">Математика</a>
-                </li>
-            </ul>
-        </li>
-
-        <li><a>6 класс</a>
-            <ul>
-            </ul>
-        </li>
-
-        <li><a>7 класс</a>
-            <ul>
-            </ul>
-        </li>
-
-        <li><a>8 класс</a>
-            <ul>
-            </ul>
-        </li>
-
-        <li><a>9 класс</a>
-            <ul>
-            </ul>
-        </li>
-
-        <li><a>10 класс</a>
-            <ul>
-            </ul>
-        </li>
-
-        <li><a>11 класс</a>
-            <ul>
-            </ul>
-        </li>
-    </ul>
-
-    <div class="content">
-        {% block content %}
+        <div class="content">
+            {% block content %}
 
 
-        {% endblock %}
+            {% endblock %}
+        </div>
     </div>
 
     <footer>

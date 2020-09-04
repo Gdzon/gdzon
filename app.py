@@ -83,24 +83,26 @@ def table_to_books(grade, subject):
 
 
 
+######
+
 subjects = ["matematika", "russkiy-yazik", "english", "algebra", "geometria", "fizika", "himiya", "nemeckiy_yazik", "biologiya", "geografiya", "istoriya", "informatika", "literatura"]
 
 #for index.html
 booksExist = {
-    "Класс": ["Класс"],
-    "matematika": ["no","no","no","no","yes","no","no","no","no","no","no","Математика"],
-    "algebra": ["no","no","no","no","no","no","no","no","no","no","no","Алгебра"],
-    "geometria": ["no","no","no","no","no","no","no","no","no","no","no","Геометрия"],
-    "russkiy-yazik": ["no","no","no","no","no","no","no","no","no","no","no","Русский язык"],
-    "english": ["no","no","no","no","no","no","no","no","no","no","no","Английский язык"],
-    "nemeckiy_yazik": ["no","no","no","no","no","no","no","no","no","no","no","Немецкий язык"],
-    "fizika": ["no","no","no","no","no","no","no","no","no","no","no","Физика"],
-    "himiya": ["no","no","no","no","no","no","no","no","no","no","no","Химия"],
-    "biologiya": ["no","no","no","no","no","no","no","no","no","no","no","Биология"],
-    "geografiya": ["no","no","no","no","no","no","no","no","no","no","no","География"],
-    "istoriya": ["no","no","no","no","no","no","no","no","no","no","no","История"],
-    "informatika": ["no","no","no","no","no","no","no","no","no","no","no","Информатика"],
-    "literatura": ["no","no","no","no","no","no","no","no","no","no","no","Литература"]
+    "Класс": ["Класс"],#f  1   2    3    4    5     6    7    8    9    10   11    subj
+    "matematika":       ["no","no","no","no","be","no","no","no","no","no","no","Математика"        ],
+    "algebra":          ["no","no","no","no","no","no","no","no","no","no","no","Алгебра"           ],
+    "geometria":        ["no","no","no","no","no","no","no","no","no","no","no","Геометрия"         ],
+    "russkiy-yazik":    ["no","no","no","no","no","no","no","no","no","no","no","Русский язык"      ],
+    "english":          ["no","no","no","no","no","no","no","no","no","no","no","Английский язык"   ],
+    "nemeckiy_yazik":   ["no","no","no","no","no","no","no","no","no","no","no","Немецкий язык"     ],
+    "fizika":           ["no","no","no","no","no","no","no","no","no","no","no","Физика"            ],
+    "himiya":           ["no","no","no","no","no","no","no","no","no","no","no","Химия"             ],
+    "biologiya":        ["no","no","no","no","no","no","no","no","no","no","no","Биология"          ],
+    "geografiya":       ["no","no","no","no","no","no","no","no","no","no","no","География"         ],
+    "istoriya":         ["no","no","no","no","no","no","no","no","no","no","no","История"           ],
+    "informatika":      ["no","no","no","no","no","no","no","no","no","no","no","Информатика"       ],
+    "literatura":       ["no","no","no","no","no","no","no","no","no","no","no","Литература"        ]
 }
 str_nums = ["0","1","2","3","4","5","6","7","8","9","10","11"]
 

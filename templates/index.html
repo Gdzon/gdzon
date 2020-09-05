@@ -30,10 +30,11 @@
                             <td>
                                 <a href="{{ url_for('table_to_books', grade=str_nums[form]+"-klass", subject=subject) }}">
                                     {% if booksExist.get(subject)[form-1]=="be" %}
-                                    <img alt="" width="26px" height="26px"
-                                         src="{{ url_for('static', filename='img/'+"be"+'.png') }}">
-
+                                        <img alt="" width="26px" height="26px"
+                                             src="{{ url_for('static', filename='img/'+"be"+'.png') }}">
                                     {% else %}
+                                        <img alt="" width="6px" height="6px"
+                                             src="{{ url_for('static', filename='img/'+"dot"+'.png') }}">
                                     {% endif %}
                                 </a>
                             </td>

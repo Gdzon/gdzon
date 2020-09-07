@@ -13,10 +13,10 @@ class Books(db.Model):
     pub_h = db.Column(db.String)
     type = db.Column(db.String)
     tasks_count = db.Column(db.Integer)
+    each_task_num = db.Column(db.Text)
 
     def __reps__(self):
         f"<Books {self.id}>"
-
 
 def addBook(id_, subject, description, grade, author, pub_h, type, tasks_count):
     try:

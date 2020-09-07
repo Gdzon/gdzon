@@ -31,11 +31,14 @@ def show_task(grade, subject, book, task):
     if re.match(r"\d[0,1]?-klass", grade) and subject in subjects:
         try:
             book_info = Books.query.filter_by(id_=book).first()
+            t = book_info.each_task_num.index(f"n{task}")
+            task_amount = int(book_info.each_task_num[t+3:t+5])
             if book_info:
                 return render_template('task.html',
                                        page_title=f"Задание {task}. {book_info.author}. {booksExist[subject][-1]}: {grade[:-6]} класс",
                                        book_info=book_info,
-                                       task_num=task)
+                                       task_num=task,
+                                       task_amount=task_amount)
 
         except Exception as e:
             print("Ошибка загрузки задания: " + str(e))

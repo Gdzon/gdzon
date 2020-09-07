@@ -1,4 +1,7 @@
-
+$(document).ready(function(){
+    var w=$(".content").outerHeight();
+    $("#left-column-back").css({"height":w});
+});
 
 
 $(function () {

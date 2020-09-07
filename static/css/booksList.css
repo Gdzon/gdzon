@@ -1,5 +1,6 @@
 ul.books-list {
     columns: 2;
+    padding-inline-start: 0;
     height: max-content;
     list-style-type: none;
 }
@@ -33,7 +34,6 @@ ul.books-list :hover{
 }
 
 #books-list-title{
-    margin-left: 5%;
     font-size: 20px;
 }
 

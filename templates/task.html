@@ -10,6 +10,8 @@
     {{ super() }}
 
     <p id="bookTitle">{{ page_title }}</p>
-    <img class="task-img" alt="{{ task_num }}" src="{{ url_for('static', filename='img/tasks/') }}{{ book_info.id_ }}/{{ task_num }}.jpg">
 
+    {% for i in range(1, task_amount+1) %}
+        <img class="task-img" alt="{{ task_num }}" src="{{ url_for('static', filename='img/tasks/') }}{{ book_info.id_ }}/{{ task_num }}-{{ i }}.jpg">
+    {% endfor %}
 {% endblock %}

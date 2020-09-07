@@ -22,7 +22,7 @@ footer {
     height: 55px;
     background: whitesmoke;
     bottom: 0;
-    position: absolute;
+    position: relative;
     margin-bottom: -55px;
     width: 100%;
     display: flex;
@@ -70,7 +70,7 @@ header a{
 }
 
 #left-column-and-content{
-    overflow: auto;
+    overflow: hidden;
 }
 
 .content {
@@ -91,12 +91,25 @@ header a{
     margin-right: 1%;
     margin-left: 1.5%;
     background: mediumslateblue;
+    position: relative;
+    z-index: 3;
 }
 #left-column-list{
     list-style-type: none;
     padding-inline-start: 0;
 }
 #left-column-list li{
+}
+
+#left-column-back{
+    float: left;
+    width: 21%;
+    margin: 8px;
+    margin-right: 1%;
+    margin-left: 1.5%;
+    background: mediumslateblue;
+    position: absolute;
+    z-index: 2;
 }
 
 ul.nav {

@@ -15,8 +15,8 @@
     <header>
         <a class="logo" href="{{ url_for('index') }}"><img alt="GDZon" height="100%" width="100%"
                                                            src="{{ url_for('static', filename='img/logo.png') }}"></a>
-        <form class="search">
-            <p><input id="search-input" type="search" name="q" placeholder="Русский язык 5 класс">
+        <form action="/search" class="search">
+            <p><input id="search-input" type="search" name="sr" placeholder="Русский язык 5 класс">
                 <input id="search-button" type="submit" value="Найти"></p>
         </form>
     </header>

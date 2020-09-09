@@ -83,8 +83,9 @@ def table_to_books(grade, subject):
     else:
         abort(404)
 
-
-
+@app.route("/search", methods=['GET'])
+def search():
+   pass
 
 ######
 

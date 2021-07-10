@@ -1,0 +1,50 @@
+.task-img {
+    width: 100%;
+}
+
+#bookTitle {
+    padding: 6px 10px 6px 10px;
+    border-radius: 4px;
+    margin: 0 0 16px 0;
+    font-size: 18px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.22);
+    text-align: center;
+}
+
+.all {
+    text-align: center;
+}
+
+.button {
+    margin-right: 6px;
+    font-weight: 900;
+    background-color: white;
+    border: 3px solid #7400E8;
+    color: #7400E8;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: Rubik;
+    cursor: pointer;
+}
+
+.path {
+    text-decoration: ;
+    color: #7400E8;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.text {
+    text-align: left;
+    font-weight: 400;
+
+}
+
+.button:hover {
+    background-color: #7400E8;
+    color: white;
+}

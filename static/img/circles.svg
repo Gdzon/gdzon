@@ -1,0 +1,55 @@
+<svg width="1920" height="3425" viewBox="0 0 1920 3425" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<rect width="1920" height="3425" fill="#7400E8"/>
+<circle cx="12" cy="56" r="75" fill="#DBFF00"/>
+<circle cx="1879" cy="905" r="75" fill="#DBFF00"/>
+<circle cx="1761.5" cy="607.5" r="42.5" fill="#DBFF00"/>
+<circle cx="87.5" cy="760.5" r="42.5" fill="#DBFF00"/>
+<circle cx="208.5" cy="1072.5" r="42.5" fill="#DBFF00"/>
+<circle cx="1854" cy="388" r="25" fill="#DBFF00"/>
+<circle cx="1694" cy="206" r="25" fill="#DBFF00"/>
+<circle cx="208" cy="156" r="25" fill="#DBFF00"/>
+<circle cx="1867" cy="79" r="115" fill="#DBFF00"/>
+<circle cx="212" cy="439" r="115" fill="#DBFF00"/>
+<circle cx="1910" cy="522" r="50" fill="white"/>
+<circle cx="69" cy="294" r="50" fill="white"/>
+<path d="M1741 753C1741 761.284 1734.28 768 1726 768C1717.72 768 1711 761.284 1711 753C1711 744.716 1717.72 738 1726 738C1734.28 738 1741 744.716 1741 753Z" fill="white"/>
+<circle cx="1860" cy="1032" r="15" fill="white"/>
+<circle cx="161" cy="868" r="15" fill="white"/>
+<circle r="75" transform="matrix(1 0 0 -1 -16 3333)" fill="#DBFF00"/>
+<circle r="75" transform="matrix(1 0 0 -1 1851 2484)" fill="#DBFF00"/>
+<circle r="42.5" transform="matrix(1 0 0 -1 1733.5 2781.5)" fill="#DBFF00"/>
+<circle r="42.5" transform="matrix(1 0 0 -1 59.5 2628.5)" fill="#DBFF00"/>
+<circle r="42.5" transform="matrix(1 0 0 -1 180.5 2316.5)" fill="#DBFF00"/>
+<circle r="25" transform="matrix(1 0 0 -1 1826 3001)" fill="#DBFF00"/>
+<circle r="25" transform="matrix(1 0 0 -1 1666 3183)" fill="#DBFF00"/>
+<circle r="25" transform="matrix(1 0 0 -1 180 3233)" fill="#DBFF00"/>
+<circle r="115" transform="matrix(1 0 0 -1 1839 3310)" fill="#DBFF00"/>
+<circle r="115" transform="matrix(1 0 0 -1 184 2950)" fill="#DBFF00"/>
+<circle r="50" transform="matrix(1 0 0 -1 1882 2867)" fill="white"/>
+<circle r="50" transform="matrix(1 0 0 -1 41 3095)" fill="white"/>
+<path d="M1713 2636C1713 2627.72 1706.28 2621 1698 2621C1689.72 2621 1683 2627.72 1683 2636C1683 2644.28 1689.72 2651 1698 2651C1706.28 2651 1713 2644.28 1713 2636Z" fill="white"/>
+<circle r="15" transform="matrix(1 0 0 -1 1832 2357)" fill="white"/>
+<circle r="15" transform="matrix(1 0 0 -1 133 2521)" fill="white"/>
+<circle r="75" transform="matrix(-1 0 0 1 1970 1257)" fill="#DBFF00"/>
+<circle r="75" transform="matrix(-1 0 0 1 103 2106)" fill="#DBFF00"/>
+<circle r="42.5" transform="matrix(-1 0 0 1 220.5 1808.5)" fill="#DBFF00"/>
+<circle r="42.5" transform="matrix(-1 0 0 1 1894.5 1961.5)" fill="#DBFF00"/>
+<circle r="42.5" transform="matrix(-1 0 0 1 1773.5 2273.5)" fill="#DBFF00"/>
+<circle r="25" transform="matrix(-1 0 0 1 128 1589)" fill="#DBFF00"/>
+<circle r="25" transform="matrix(-1 0 0 1 288 1407)" fill="#DBFF00"/>
+<circle r="25" transform="matrix(-1 0 0 1 1774 1357)" fill="#DBFF00"/>
+<circle r="115" transform="matrix(-1 0 0 1 115 1280)" fill="#DBFF00"/>
+<circle r="115" transform="matrix(-1 0 0 1 1770 1640)" fill="#DBFF00"/>
+<circle r="50" transform="matrix(-1 0 0 1 72 1723)" fill="white"/>
+<circle r="50" transform="matrix(-1 0 0 1 1913 1495)" fill="white"/>
+<path d="M241 1954C241 1962.28 247.716 1969 256 1969C264.284 1969 271 1962.28 271 1954C271 1945.72 264.284 1939 256 1939C247.716 1939 241 1945.72 241 1954Z" fill="white"/>
+<circle r="15" transform="matrix(-1 0 0 1 122 2233)" fill="white"/>
+<circle r="15" transform="matrix(-1 0 0 1 1821 2069)" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="1920" height="3425" fill="white"/>
+</clipPath>
+</defs>
+</svg>

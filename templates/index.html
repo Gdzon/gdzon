@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block add_head %}
+    {{ super() }}
+
+    <link type="text/css" href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+    {{ super() }}
+
+    <article>
+
+    </article>
+
+    <table id="indexTable">
+        {% for subject in subjects %}
+            <tr>
+                {% for form in range(12) %}
+
+                    {% if form == 0 %}
+                        {% if subject == "Класс" %}
+                            <th class ="subject-name-class" width="12"%>{{subjects[subject][-1]}}</th>
+                        {% else %}
+                            <th class ="subject-name" width="12%">{{subjects[subject][-1]}}</th>
+                        {% endif %}
+                    {% else %}
+
+                        {% if subject == "Класс" %}
+                            <th class="form-num" width="8%">{{ form }}</th>
+                        {% endif %}
+
+                        {% if subject != "Класс" %}
+                            <td>
+                                <a href="{{ url_for('table_to_books', grade=form.__str__()+"-klass", subject=subject) }}">
+                                    {% if Books.query.filter_by(subject=subject, grade=form).first() %}
+                                        <img class='be' width="26px" height="26px"
+                                             src="{{ url_for('static', filename='img/'+"be_2"+'.svg') }}">
+                                    {% else %}
+                                        <img class='dot' alt="" width="6px" height="6px"
+                                             src="{{ url_for('static', filename='img/'+"dot"+'.png') }}">
+                                    {% endif %}
+                                </a>
+                            </td>
+                        {% endif %}
+
+                    {% endif %}
+
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -14,12 +14,16 @@
     </article>
 
     <table id="indexTable">
-        {% for subject in booksExist %}
+        {% for subject in subjects %}
             <tr>
                 {% for form in range(12) %}
 
                     {% if form == 0 %}
-                        <th class="subject-name" width="12%">{{ booksExist[subject][-1] }}</th>
+                        {% if subject == "Класс" %}
+                            <th class ="subject-name-class" width="12"%>{{subjects[subject][-1]}}</th>
+                        {% else %}
+                            <th class ="subject-name" width="12%">{{subjects[subject][-1]}}</th>
+                        {% endif %}
                     {% else %}
 
                         {% if subject == "Класс" %}
@@ -28,12 +32,12 @@
 
                         {% if subject != "Класс" %}
                             <td>
-                                <a href="{{ url_for('table_to_books', grade=str_nums[form]+"-klass", subject=subject) }}">
-                                    {% if booksExist.get(subject)[form-1]=="be" %}
-                                        <img alt="" width="26px" height="26px"
-                                             src="{{ url_for('static', filename='img/'+"be"+'.png') }}">
+                                <a href="{{ url_for('table_to_books', grade=form.__str__()+"-klass", subject=subject) }}">
+                                    {% if Books.query.filter_by(subject=subject, grade=form).first() %}
+                                        <img class='be' width="26px" height="26px"
+                                             src="{{ url_for('static', filename='img/'+"be_2"+'.svg') }}">
                                     {% else %}
-                                        <img alt="" width="6px" height="6px"
+                                        <img class='dot' alt="" width="6px" height="6px"
                                              src="{{ url_for('static', filename='img/'+"dot"+'.png') }}">
                                     {% endif %}
                                 </a>
@@ -46,5 +50,4 @@
             </tr>
         {% endfor %}
     </table>
-
 {% endblock %}

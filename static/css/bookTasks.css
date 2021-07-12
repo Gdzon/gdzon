@@ -1,32 +1,71 @@
-.taskButton {
-    display: inline-block;
-    float: left;
-    background-color: aliceblue;
-    border: 1px cornflowerblue;
-    border-style: solid;
-    text-decoration: none;
-    width: 38px;
-    height: 25px;
-    text-align: center;
-    margin-right: 4px;
-    margin-bottom: 5px;
-}
 
 #bookTitle {
-    font-size: larger;
+    padding: 6px 10px 6px 10px;
+    border-radius: 4px;
+    margin: 0 0 16px 0;
+    font-size: 18px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.22);
+    text-align: center;
 }
 
 #bookDescription {
     color: dimgray;
+    font-weight: 400;
 }
 
 #tasksList {
     list-style-type: none;
     padding-inline-start: 0;
 }
+
 #bookCover {
     width: 90px;
     height: 120px;
     float: left;
-    margin-right: 1%;
+    margin-right: 16px;
+}
+
+.ttt {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: stretch;
+    margin-top: 20px;
+}
+
+.path {
+    color: #7400E8;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.text {
+    text-align: left;
+    font-weight: 400;
+}
+
+.test {
+    display: flex;
+    border: 3px solid #7400E8;
+    border-radius: 4px;
+    flex-basis: 7.5%;
+    min-width: 60px;
+    height: 40px;
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    font-size: 18px;
+    color: #7400E8;
+    flex-grow: 1;
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+.pt {
+    margin: auto auto;
+    border: 1px solid #eee;
+}
+
+.test:hover {
+    background: #7400E8;
+    color: white;
 }

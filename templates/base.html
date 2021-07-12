@@ -8,86 +8,46 @@
         <script src="{{ url_for('static', filename = 'js/main.js') }}"></script>
         <link type="text/css" href="{{ url_for('static', filename='css/global.css') }}" rel="stylesheet"/>
     {% endblock %}
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;900&display=swap');
+    </style>
+
+
+
 </head>
 <body>
-<div id="body-div">
+<div class="body-div">
 
     <header>
         <a class="logo" href="{{ url_for('index') }}"><img alt="GDZon" height="100%" width="100%"
-                                                           src="{{ url_for('static', filename='img/logo.png') }}"></a>
+                                                           src="{{ url_for('static', filename='img/logo_2.svg') }}"></a>
         <form action="/search" class="search">
             <p><input id="search-input" type="search" name="sr" placeholder="Русский язык 5 класс">
-                <input id="search-button" type="submit" value="Найти"></p>
+               <input id="search-button" type="submit" value="Найти"></p>
         </form>
     </header>
 
-    <div id="left-column-and-content">
-        <div id="left-column">
-            <ul id="left-column-list">
+    <div class="left-column-and-content">
+        <div class="left-column">
+            <ul class="left-column-list">
 
-                <li>
                     <ul class="nav">
-                        <li><a>1 класс</a>
-                            <ul>
-                                <li><a href="{{ url_for('table_to_books', grade="1-klass", subject="matematika") }}">Математика</a>
-                                </li>
-                            </ul>
-                        </li>
+                        {% for form in range(1, 12) %}
+                            <li><a>{{form.__str__() + " класс"}}</a>
+                                <ul>
+                                    {% for subject in subjects %}
+                                        {% if Books.query.filter_by(subject=subject, grade=form).first() %}
+                                            <li><a href="{{ url_for('table_to_books', grade=form.__str__()+"-klass", subject=subject) }}">{{subjects[subject][-1]}}</a>
+                                            </li>
+                                        {% endif %}
 
-                        <li><a>2 класс</a>
-                            <ul>
-                            </ul>
-                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        {% endfor %}
 
-                        <li><a>3 класс</a>
-                            <ul>
-                            </ul>
-                        </li>
-
-                        <li><a>4 класс</a>
-                            <ul>
-                            </ul>
-                        </li>
-
-                        <li><a>5 класс</a>
-                            <ul>
-                                <li><a id="www"
-                                       href="{{ url_for('table_to_books', grade="5-klass", subject="matematika") }}">Математика</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li><a>6 класс</a>
-                            <ul>
-                            </ul>
-                        </li>
-
-                        <li><a>7 класс</a>
-                            <ul>
-                            </ul>
-                        </li>
-
-                        <li><a>8 класс</a>
-                            <ul>
-                            </ul>
-                        </li>
-
-                        <li><a>9 класс</a>
-                            <ul>
-                            </ul>
-                        </li>
-
-                        <li><a>10 класс</a>
-                            <ul>
-                            </ul>
-                        </li>
-
-                        <li><a>11 класс</a>
-                            <ul>
-                            </ul>
-                        </li>
                     </ul>
-                </li>
 
             </ul>
         </div>
@@ -99,7 +59,7 @@
             {% endblock %}
         </div>
 
-        <div id="left-column-back"></div>
+        <div class="left-column-back"></div>
     </div>
 
     <footer>

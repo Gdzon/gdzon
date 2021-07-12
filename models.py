@@ -4,7 +4,6 @@ db = SQLAlchemy(session_options={"autoflush": False})
 
 
 class Books(db.Model):
-
     id_ = db.Column(db.String, primary_key=True)
     subject = db.Column(db.String)
     description = db.Column(db.Text)
@@ -20,7 +19,8 @@ class Books(db.Model):
 
 def addBook(id_, subject, description, grade, author, pub_h, type, tasks_count):
     try:
-        b = Books(id_=id_, subject=subject, description=description, grade=grade, author=author, pub_h=pub_h, type=type, tasks_count=tasks_count)
+        b = Books(id_=id_, subject=subject, description=description, grade=grade, author=author, pub_h=pub_h, type=type,
+                  tasks_count=tasks_count)
         db.session.add(b)
         db.session.commit()
     except Exception as e:

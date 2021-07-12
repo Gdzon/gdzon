@@ -1,51 +1,83 @@
 ul.books-list {
-    columns: 2;
     padding-inline-start: 0;
     height: max-content;
     list-style-type: none;
-}
-ul.books-list li {
     display: flex;
-    height: 124px;
-    overflow: auto;
-    margin-bottom: 13px;
+    flex-flow: row wrap;
+    font-size: 20px;
+    justify-content: space-between;
 }
-ul.books-list :hover{
-    background: lavenderblush;
+
+.book {
+    text-decoration: none;
+    display: flex;
+    flex-basis: 7.5%;
+    min-width: 60px;
+    height: 120px;
+    overflow: hidden;
+    margin: 0 10px 20px 0;
+    min-width: 48%;
+    max-width: 45%;
+    flex-grow: 0;
+    color: #7400E8;
+    border-radius: 4px;
+
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
 }
+
+.book:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.22);
+}
+
 #bookAuthor {
     float: left;
     text-decoration: none;
 }
+
 #bookAuthor p{
-    color: #333333;
+    color: #7400E8;
     margin: 0;
-    font-size: 20px;
 }
+
 #bookCover {
-    height: 120px;
-    width: 100px;
+    margin: -6px 0 0 10px;
+    height: 100px;
+    width: 80px;
 }
 
 .book-info {
-    margin-top: 10px;
     padding-inline-start: 0;
     margin-left: 2%;
 }
 
+.path {
+    color: #7400E8;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.text {
+    text-align: left;
+    font-weight: 400;
+}
+
 #books-list-title{
-    font-size: 20px;
+    padding: 6px 10px 6px 10px;
+    border-radius: 4px;
+    margin: 0 0 0 0;
+    font-size: 18px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.22);
+    text-align: center;
 }
 
 #pub_h {
     text-decoration: none;
 }
+
 #pub_h p{
-    font-size: 15px;
     margin: 0;
-    color: darkgrey;
 }
 
 .content {
-
 }

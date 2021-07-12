@@ -1,21 +1,31 @@
-body {
-    margin: 0;
-    margin-left: 8%;
-    margin-right: 8%;
-    background: url("/static/img/background.jpg");
-    z-index: 6;
-    position: relative;
 
-    font-family: "Gill Sans";
+body {
+    /*  блок расположен: base.html
+        стили для задания фонового цвета для всего сайта и подключения фоновой картинки с кружочками
+        Здесь задается общий шрифт для всего сайта по умолчанию (а зачем?)*/
+    background: url('../img/circles.svg');
+    background-color: #7400E8;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 6; /* Зачем? */
+    position: relative; /* Зачем?*/
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
+    font-size: 24;
+    color: #7400E8;
 }
 
-#body-div{
+.body-div{
+    margin-left: 8%;
+    margin-right: 8%;
     background: white;
     position: absolute;
     z-index: 3;
-    width: 100%;
+    width: 84%;
     margin-top: 20px;
     margin-bottom: 70px;
+    box-shadow: 0 0px 10px rgba(0,0,0,0.22);
 }
 
 footer {
@@ -35,7 +45,9 @@ header {
     display: flex;
     position: relative;
     background: white;
-    top: 0;
+    top: 0;     /* Уточнить что это?*/
+    box-shadow: 0 0px 10px rgba(0,0,0,0.22);
+    border-radius: 4px;
 }
 header a{
     margin-right: 1.2%;
@@ -47,30 +59,48 @@ header a{
     width: 75%;
     height: 100%;
     display: flex;
+    margin-top: -6px;
 }
+
 .search p {
     width: 100%;
 }
+
 #search-input {
     width: 87%;
-    height: 33px;
-    border-radius: 3px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: mediumslateblue;
+    height: 40px;
+    border-radius: 4px;
+    border: 3px solid #7400E8;
     padding-left: 8px;
-}
-#search-button {
-    width: 12%;
-    height: 33px;
-    background: mediumslateblue;
-    border-radius: 3px;
-    border-width: 0;
-    color: white;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 24;
+
+    margin-left: -10px;
+    margin-right: 6px;
 }
 
-#left-column-and-content{
-    overflow: hidden;
+#search-button {
+    width: 12%;
+    height: 40px;
+    background: #7400E8;
+    border-radius: 4px;
+    border: 3px solid #7400E8;
+    color: white;
+    cursor: pointer;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
+    font-size: 24;
+
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+#search-button:hover {
+    background-color: #dbfe01;
+    color: #7400E8;
 }
 
 .content {
@@ -83,71 +113,60 @@ header a{
     margin-bottom: 20px;
 }
 
-#left-column {
+.left-column {
     float: left;
-    width: 21%;
+    width: 200px;
     height: 100%;
-    margin: 8px;
+    margin-top: 10px;
     margin-right: 1%;
-    margin-left: 1.5%;
-    background: mediumslateblue;
+    margin-left: 12px;
     position: relative;
     z-index: 3;
-}
-#left-column-list{
-    list-style-type: none;
-    padding-inline-start: 0;
-}
-#left-column-list li{
+    box-shadow: 0 0px 10px rgba(0,0,0,0.22);
+    border-radius: 4px;
 }
 
-#left-column-back{
-    float: left;
-    width: 21%;
-    margin: 8px;
-    margin-right: 1%;
-    margin-left: 1.5%;
-    background: mediumslateblue;
-    position: absolute;
-    z-index: 2;
+.left-column-list{
+    list-style-type: none;
+    padding-inline-start: 0;
 }
 
 ul.nav {
     padding-inline-start: 0;
     list-style-type: none;
     position: relative;
-    width: 87%;
-    margin: 0 auto;
+    width: 100%;
+    margin: -16px 0 0 0;
 }
+
 ul.nav ul {
-    margin: 0;
     display: none;
     list-style: none;
 }
+
+ul.nav a:hover {
+    background-color: #7400E8;
+    color: white;
+}
+
 ul.nav a {
-  background-color: #4CAF50;
-  border: 1px solid green;
   padding: 10px 30px;
   text-align: center;
   text-decoration: none;
   font-size: 17px;
   cursor: pointer;
   display: block;
-  color: white;
+  color: #7400E8;
 }
-ul.nav ul > li > a {
-    background-color: dodgerblue;
-}
-ul.nav li:last-child a {
-    border-bottom: 1px solid #333;
-}
-ul.nav a:hover {
-    background-color: cornflowerblue;
-}
+
 ul.nav li > ul > li > a {
-    width: 89%;
+    width: 140px;
+    text-align: center;
+    background-color: #5B00B6;
+    color: white;
+    margin: 0 0 0 -40px;
 }
 
-
-
-
+ul.nav li > ul > li > a:hover {
+    background-color: #7400E8;
+}

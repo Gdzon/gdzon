@@ -10,12 +10,16 @@
     {{ super() }}
 
     <p id="bookTitle">{{page_title}}</p>
+
+    <p class="text"><a class="path" href="/">Главная</a>/<a class="path" href={{ url[:url.rfind('/')] }}>{{ subject + " " + grade + " класс "}}</a>/<a class="path" href={{ url }}>{{ book }}</a></p>
+
     <img id="bookCover" alt="{{ book_info.id_ }}" src="{{ url_for('static', filename='img/covers/') }}{{ book_info.id_ }}.jpg">
     <article id="bookDescription"> {{ book_info.description }} </article>
 
-    <ul id="tasksList">
-        {% for i in range(1, book_info.tasks_count) %}
-            <li><a class="taskButton" href="{{ url_for('show_task', grade=book_info.grade+"-klass", subject=book_info.subject, book=book_info.id_, task=i) }}">{{ i }}</a></li>
+    <div class="ttt">
+        {% for i in range(1, 55) %}
+            <a class="test" href={{ url_for('show_task', grade=book_info.grade+"-klass", subject=book_info.subject, book=book_info.id_, task=i) }}><span class="pt">{{i}}</span></a>
         {% endfor %}
-    </ul>
+    </div>
+
 {% endblock %}

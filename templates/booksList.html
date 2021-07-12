@@ -9,18 +9,24 @@
 {% block content %}
     {{ super() }}
 
-    <p id="books-list-title">{{ page_title }}</p>
+    <div class="books">
+        <p id="books-list-title">{{ page_title }}</p>
 
-    <ul class="books-list">
-        {% for book in books_list %}
-            <li>
-                <a href="{{ url_for('book_tasks', grade=grade+"-klass", subject=subject, book=book.id_) }}"><img id="bookCover" alt="" src="{{ url_for('static', filename='img/covers/'+book.id_) }}.jpg"></a>
-                <ul class="book-info">
-                    <a id="bookAuthor" href="{{ url_for('book_tasks', grade=grade+"-klass", subject=subject, book=book.id_) }}"><p>{{ book.author }}</p></a>
-                    <a id="pub_h" href="{{ url_for('book_tasks', grade=grade+"-klass", subject=subject, book=book.id_) }}"><p>{{ book.pub_h }}</p></a>
-                </ul>
-            </li>
-        {% endfor %}
-    </ul>
+        <p class="text"><a class="path" href="/">Главная</a>/<a class="path" href={{ url }}>{{ ru_subject + " " + grade + " класс "}}</a></p>
+
+        <ul class="books-list">
+            {% for book in books_list %}
+                <a class="book" href="{{ url_for('book_tasks', grade=grade+"-klass", subject=subject, book=book.id_) }}">
+                    <p><img id="bookCover" alt="" src="{{ url_for('static', filename='img/covers/'+book.id_) }}.jpg"></p>
+
+                    <div class="book-info">
+                        <p>{{ book.author }}</p>
+                        <p>{{ book.pub_h }}</p>
+                    </div>
+
+                </a>
+            {% endfor %}
+        </ul>
+    </div>
 
 {% endblock %}

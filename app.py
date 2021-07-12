@@ -13,7 +13,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'wefhiu42h5ui43h534uth3u4itbger'
 db.init_app(app)
 
-
 # app.ROUTE decorators
 
 @app.route('/')

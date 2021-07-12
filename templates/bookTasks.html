@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block add_head %}
+    {{ super() }}
+
+    <link type="text/css" href="{{ url_for('static', filename='css/bookTasks.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+    {{ super() }}
+
+    <p id="bookTitle">{{page_title}}</p>
+
+    <p class="text"><a class="path" href="/">Главная</a>/<a class="path" href={{ url[:url.rfind('/')] }}>{{ subject + " " + grade + " класс "}}</a>/<a class="path" href={{ url }}>{{ book }}</a></p>
+
+    <img id="bookCover" alt="{{ book_info.id_ }}" src="{{ url_for('static', filename='img/covers/') }}{{ book_info.id_ }}.jpg">
+    <article id="bookDescription"> {{ book_info.description }} </article>
+
+    <div class="ttt">
+        {% for i in range(1, 55) %}
+            <a class="test" href={{ url_for('show_task', grade=book_info.grade+"-klass", subject=book_info.subject, book=book_info.id_, task=i) }}><span class="pt">{{i}}</span></a>
+        {% endfor %}
+    </div>
+
+{% endblock %}

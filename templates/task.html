@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block add_head %}
+    {{ super() }}
+
+    <link type="text/css" href="{{ url_for('static', filename='css/task.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+    {{ super() }}
+
+    <div class="all">
+        <p id="bookTitle">{{ page_title }}</p>
+
+        <p class="text"><a class="path" href="/">Главная</a>/<a class="path" href={{ (url[:url.rfind('/')])[:url[:url.rfind('/')].rfind('/')] }}>{{ subject + " " + grade + " класс "}}</a>/<a class="path" href={{ url[:url.rfind('/')] }}>{{ book }}</a>/<a class="path" href={{ url }}>{{"Номер " + task.__str__() }}</a></p>
+
+        <img class="task-img" alt="{{ task_num }}" src="{{ url_for('static', filename='img/tasks/пятьбунимович/' + lol[task_num - 1]) }}">
+
+        {% if task_num != 1 and task_num != len %}
+            <p><a class="button" href={{url[:url.rfind('/')] + "/" + (task_num - 1).__str__()}}>← Предыдущий номер</a>
+                <a class="button" href={{url[:url.rfind('/')] + "/" + (task_num + 1).__str__()}}>Следующий номер →</a>
+        {% endif %}
+        {% if task_num == 1 %}
+            <p><a class="button" href={{url[:url.rfind('/')] + "/" + (task_num + 1).__str__()}}>Следующий номер →</a>
+        {% endif %}
+        {% if task_num == len %}
+            <p><a class="button" href={{url[:url.rfind('/')] + "/" + (task_num - 1).__str__()}}>← Предыдущий номер</a>
+        {% endif %}
+
+    </div>
+
+{% endblock %}

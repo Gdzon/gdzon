@@ -16,11 +16,15 @@ db.init_app(app)
 
 # app.ROUTE decorators
 
+@app.context_processor
+def base_vars():
+    return dict(subjects=subjects, Books=Books)
+
 @app.route('/')
 def index():
     # db.drop_all()
     # db.create_all()
-    return render_template('index.html', title="hello!", subjects=subjects, page_title="ГДЗон", Books=Books)
+    return render_template('index.html', title="hello!", subjects=subjects, page_title="ГДЗон")
 
 
 @app.route('/<grade>/<subject>/<book>/<int:task>')
@@ -43,8 +47,7 @@ def show_task(grade, subject, book, task):
                                        grade=grade[:-6],
                                        task=task,
                                        subject=subjects[subject][-1],
-                                       subjects=subjects,
-                                       Books=Books)
+                                       )
 
         except Exception as e:
             print("Ошибка загрузки задания: " + str(e))
@@ -69,8 +72,6 @@ def book_tasks(grade, subject, book):
                                        book=book_info.author,
                                        grade=grade[:-6],
                                        subject=subjects[subject][-1],
-                                       subjects=subjects,
-                                       Books=Books
                                        )
             else:
                 abort(404)
@@ -95,8 +96,6 @@ def table_to_books(grade, subject):
                                    subject=subject,
                                    ru_subject = subjects[subject][-1],
                                    url=f'/{str(grade) + "-klass"}/{subject}',
-                                   subjects=subjects,
-                                   Books=Books
                                    )
         except Exception as e:
             print("Ошибка получения списка книг: ", str(e))

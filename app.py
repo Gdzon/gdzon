@@ -121,8 +121,7 @@ def admin():
 @app.route('/lol')
 def lol():
     return render_template("lol.html", page_title="Админка")
-
-
+t=10
 subjects = {"Класс": ["Класс"],
     "maths": ["Математика"], "algebra": ["Алгебра"],
     "geometries": ["Геометрия"], "english": ["Английский"],

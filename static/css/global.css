@@ -170,3 +170,7 @@ ul.nav li > ul > li > a {
 ul.nav li > ul > li > a:hover {
     background-color: #7400E8;
 }
+
+@media screen and (max-width: 700px){
+
+}

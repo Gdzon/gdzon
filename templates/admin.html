@@ -1,0 +1,21 @@
+{%extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+{% for cat, msg in get_flashed_messages(True) %}
+<div class='flash {{cat}}'>{{msg}}</div>
+{% endfor %}
+<form action='/admin' method='post' class='form-contact'>
+    <p><label>Класс учебника</label><input type='text' name='grade' placeholder='11' required />
+    <p><label>Название учебника</label> <input type='text' name='address' placeholder='baranov' required />
+    <p><label>Авторы учебника</label> <input type='text' name='address' placeholder='М.Т. Баранов, Т.А. Ладыженская' required />
+    <p><label>Количество блоков</label> <input type='text' name='blocks' placeholder='4' required />
+    <p><label>Количество файлов</label><input type='text' name='num_files' placeholder='972' required />
+
+    <p><label>Описание учебника</label>
+    <p><textarea type='text' name='description' placeholder='АААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААА' required></textarea>
+
+    <p><input type="submit" value="Создать" />
+</form>
+
+{% endblock %}

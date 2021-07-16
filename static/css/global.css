@@ -5,32 +5,45 @@ body {
         Здесь задается общий шрифт для всего сайта по умолчанию (а зачем?)*/
     background: url('../img/circles.svg');
     background-color: #7400E8;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: 100%;
     z-index: 6; /* Зачем? */
     position: relative; /* Зачем?*/
 
     font-family: 'Rubik', sans-serif;
     font-weight: 900;
-    font-size: 24;
     color: #7400E8;
+
+    text-align: center;
+}
+
+html {
+    width:100vw;
+    overflow-x:hidden;
+}
+
+.left-column-and-content {
+    text-align: center;
+    display: inline-block;
+    margin: auto;
 }
 
 .body-div{
-    margin-left: 8%;
-    margin-right: 8%;
+    margin: auto;
     background: white;
-    position: absolute;
+
     z-index: 3;
-    width: 84%;
+    width: 90%;
+
     margin-top: 20px;
-    margin-bottom: 70px;
+    margin-bottom: 20px;
     box-shadow: 0 0px 10px rgba(0,0,0,0.22);
+    padding-top: 1px;
 }
 
 footer {
     height: 55px;
     background: whitesmoke;
+
     bottom: 0;
     position: relative;
     margin-bottom: -55px;
@@ -39,18 +52,22 @@ footer {
 }
 
 header {
-    margin: 12px;
-    margin-bottom: 7px;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
     height: 60px;
+    width: 98%;
+
     display: flex;
     position: relative;
     background: white;
+
     top: 0;     /* Уточнить что это?*/
     box-shadow: 0 0px 10px rgba(0,0,0,0.22);
     border-radius: 4px;
 }
+
 header a{
-    margin-right: 1.2%;
     height: 100%;
     width: 22%;
 }
@@ -75,7 +92,6 @@ header a{
 
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
-    font-size: 24;
 
     margin-left: -10px;
     margin-right: 6px;
@@ -92,7 +108,6 @@ header a{
 
     font-family: 'Rubik', sans-serif;
     font-weight: 900;
-    font-size: 24;
 
     -webkit-transition-duration: 0.2s; /* Safari */
     transition-duration: 0.2s;
@@ -103,39 +118,55 @@ header a{
     color: #7400E8;
 }
 
+.ad {
+    width: 240px;
+    height: 400px;
+    float: right;
+    margin-left: 10px;
+
+    border: 1px solid purple;
+}
+
 .content {
     float: right;
-    width: 75%;
+    width: 80%;
     height: max-content;
-    margin-right: 1%;
+
     position: relative;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    border: 1px solid green;
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.left-column-and-content {
+    width: 98%;
 }
 
 .left-column {
     float: left;
-    width: 200px;
+    width: 19%;
     height: 100%;
-    margin-top: 10px;
-    margin-right: 1%;
-    margin-left: 12px;
+
     position: relative;
-    z-index: 3;
+
     box-shadow: 0 0px 10px rgba(0,0,0,0.22);
     border-radius: 4px;
+
+    border: 1px solid blue;
 }
 
 .left-column-list{
     list-style-type: none;
     padding-inline-start: 0;
+    height: 100%;
 }
 
 ul.nav {
     padding-inline-start: 0;
     list-style-type: none;
     position: relative;
-    width: 100%;
     margin: -16px 0 0 0;
 }
 
@@ -153,14 +184,12 @@ ul.nav a {
   padding: 10px 30px;
   text-align: center;
   text-decoration: none;
-  font-size: 17px;
   cursor: pointer;
   display: block;
   color: #7400E8;
 }
 
 ul.nav li > ul > li > a {
-    width: 140px;
     text-align: center;
     background-color: #5B00B6;
     color: white;
@@ -171,6 +200,84 @@ ul.nav li > ul > li > a:hover {
     background-color: #7400E8;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 1275px) {
+    .ad {
+        width: 160px;
+        height: 600px;
+    }
 
+    #indexTable {
+        width: 80%;
+    }
+
+    .logo {
+        width: 24%;
+    }
+}
+
+@media screen and (max-width: 1165px) {
+    .ad {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .left-column {
+        display: none;
+    }
+
+    #indexTable {
+        width: 500px;
+    }
+
+    .content {
+        width: 100%;
+        margin: auto;
+        display: inline-block;
+    }
+
+    .body-div {
+        text-align: center;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    header {
+        width: 97%;
+    }
+
+}
+
+@media screen and (max-width: 755px) {
+    .left-column-and-content {
+        width: 95%;
+    }
+
+    .left-column {
+        display: inline-block;
+        width: 100%;
+        margin: auto;
+    }
+
+    .left-column-list {
+        width: 100%;
+    }
+
+    .content {
+        display: none
+    }
+
+    .body-div {
+        text-align: center;
+    }
+
+    header {
+        width: 96%;
+    }
 }

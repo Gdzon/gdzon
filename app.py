@@ -29,7 +29,7 @@ def index():
 
 @app.route('/<grade>/<subject>/<book>/<int:task>')
 def show_task(grade, subject, book, task):
-    lol = os.listdir(r'F:\gdzon-master\gdzon-master\static\img\tasks\пятьбунимович')
+    lol = os.listdir(r'static\img\tasks\пятьбунимович')
     lol = sorted(lol, key=lambda x: int("".join([i for i in x if i.isdigit()])))
     if re.match(r"\d[0,1]?-klass", grade) and subject in subjects.keys():
         try:
@@ -121,7 +121,7 @@ def admin():
 @app.route('/lol')
 def lol():
     return render_template("lol.html", page_title="Админка")
-t=10
+
 subjects = {"Класс": ["Класс"],
     "maths": ["Математика"], "algebra": ["Алгебра"],
     "geometries": ["Геометрия"], "english": ["Английский"],

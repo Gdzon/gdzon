@@ -16,16 +16,26 @@
 
         <img class="task-img" alt="{{ task_num }}" src="{{ url_for('static', filename='img/tasks/пятьбунимович/' + lol[task_num - 1]) }}">
 
-        {% if task_num != 1 and task_num != len %}
-            <p><a class="button" href={{url[:url.rfind('/')] + "/" + (task_num - 1).__str__()}}>← Предыдущий номер</a>
-                <a class="button" href={{url[:url.rfind('/')] + "/" + (task_num + 1).__str__()}}>Следующий номер →</a>
-        {% endif %}
-        {% if task_num == 1 %}
-            <p><a class="button" href={{url[:url.rfind('/')] + "/" + (task_num + 1).__str__()}}>Следующий номер →</a>
-        {% endif %}
-        {% if task_num == len %}
-            <p><a class="button" href={{url[:url.rfind('/')] + "/" + (task_num - 1).__str__()}}>← Предыдущий номер</a>
-        {% endif %}
+        <div class="buttons_next">
+            {% if task_num != 1 and task_num != len %}
+                <p><a class="button" href={{url[:url.rfind('/')] + "/" + (task_num - 1).__str__()}}>🡄 Предыдущий номер</a>
+                    <a class="button" href={{url[:url.rfind('/')] + "/" + (task_num + 1).__str__()}}>Следующий номер 🡆</a>
+
+                <p><a class="button_mini" href={{url[:url.rfind('/')] + "/" + (task_num - 1).__str__()}}>🡄</a>
+                <a class="button_mini" href={{url[:url.rfind('/')] + "/" + (task_num + 1).__str__()}}>🡆</a>
+            {% endif %}
+            {% if task_num == 1 %}
+                <p><a class="button" href={{url[:url.rfind('/')] + "/" + (task_num + 1).__str__()}}>Следующий номер 🡆</a>
+
+                <p><a class="button_mini" href={{url[:url.rfind('/')] + "/" + (task_num + 1).__str__()}}>🡆</a>
+
+            {% endif %}
+            {% if task_num == len %}
+                <p><a class="button" href={{url[:url.rfind('/')] + "/" + (task_num - 1).__str__()}}>🡄 Предыдущий номер</a>
+
+                <p><a class="button_mini" href={{url[:url.rfind('/')] + "/" + (task_num - 1).__str__()}}>🡄</a>
+            {% endif %}
+        </div>
 
     </div>
 

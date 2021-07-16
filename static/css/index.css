@@ -40,3 +40,27 @@
 .be:hover {
     filter: brightness(90%);
 }
+
+@media screen and (max-width: 1275px) {
+    #indexTable {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    #indexTable {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 755px) {
+    .left-column {
+        display: inline-block;
+        width: 100%;
+        margin: auto;
+    }
+
+    .content {
+        display: none
+    }
+}

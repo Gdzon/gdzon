@@ -212,10 +212,6 @@ ul.nav li > ul > li > a:hover {
         height: 600px;
     }
 
-    #indexTable {
-        width: 80%;
-    }
-
     .logo {
         width: 24%;
     }
@@ -230,10 +226,6 @@ ul.nav li > ul > li > a:hover {
 @media screen and (max-width: 930px) {
     .left-column {
         display: none;
-    }
-
-    #indexTable {
-        width: 500px;
     }
 
     .content {
@@ -265,22 +257,8 @@ ul.nav li > ul > li > a:hover {
         width: 95%;
     }
 
-    .left-column {
-        display: inline-block;
-        width: 100%;
-        margin: auto;
-    }
-
     .left-column-list {
         width: 100%;
-    }
-
-    .content {
-        display: none
-    }
-
-    .body-div {
-        text-align: center;
     }
 
     header {

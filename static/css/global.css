@@ -200,6 +200,12 @@ ul.nav li > ul > li > a:hover {
     background-color: #7400E8;
 }
 
+@media screen and (min-width: 1500px){
+    body{
+        width: 1500px;
+    }
+}
+
 @media screen and (max-width: 1275px) {
     .ad {
         width: 160px;

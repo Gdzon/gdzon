@@ -1,0 +1,109 @@
+.books {
+    border: 1px solid red;
+    width: 100%;
+}
+
+#books-list {
+    padding-inline-start: 0;
+    height: max-content;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 16px;
+    justify-content: space-between;
+}
+
+.book {
+    display: flex;
+    flex-basis: 7.5%;
+    height: 120px;
+    overflow: hidden;
+    margin: 0 10px 20px 0;
+    min-width: 48%;
+    color: #7400E8;
+    border-radius: 4px;
+
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+.book:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.22);
+}
+
+.bookAuthor {
+    float: left;
+    text-decoration: none;
+}
+
+.bookAuthor p{
+    margin: 0;
+}
+
+.bookCover {
+    margin: -6px 0 0 10px;
+    height: 110px;
+    width: 87px;
+}
+
+.bookInfo {
+    padding-inline-start: 0;
+    margin-left: 2%;
+}
+
+.path {
+    color: #7400E8;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.text {
+    text-align: left;
+    font-weight: 400;
+}
+
+#books-list-title{
+    padding: 6px 10px 6px 10px;
+    border-radius: 4px;
+    margin: 0 0 0 0;
+    font-size: 18px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.22);
+    text-align: center;
+}
+
+.bookPubH {
+    text-decoration: none;
+    opacity: 60%;
+    font-size: 12px;
+}
+
+.bookPubH p{
+    margin: 0;
+}
+
+.content {
+}
+
+@media screen and (max-width: 930px) {
+    .book {
+        font-size: 15px;
+    }
+
+    #bookTitle {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .book {
+        font-size: 13px;
+    }
+
+    #bookTitle {
+        font-size: 13px;
+    }
+
+    #books-list {
+        flex-flow: column;
+    }
+}

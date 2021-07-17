@@ -32,14 +32,13 @@
 }
 
 .bookAuthor p{
-    color: #7400E8;
     margin: 0;
 }
 
 .bookCover {
     margin: -6px 0 0 10px;
-    height: 100px;
-    width: 80px;
+    height: 110px;
+    width: 87px;
 }
 
 .bookInfo {
@@ -69,6 +68,8 @@
 
 .bookPubH {
     text-decoration: none;
+    opacity: 60%;
+    font-size: 12px;
 }
 
 .bookPubH p{
@@ -80,21 +81,21 @@
 
 @media screen and (max-width: 930px) {
     .book {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     #bookTitle {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 
 @media screen and (max-width: 600px){
     .book {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     #bookTitle {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     #books-list {

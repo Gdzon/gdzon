@@ -13,6 +13,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///first.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'wefhiu42h5ui43h534uth3u4itbger'
 db.init_app(app)
+THIS_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)))
 
 # app.ROUTE decorators
 
@@ -29,24 +30,22 @@ def index():
 
 @app.route('/<grade>/<subject>/<book>/<int:task>')
 def show_task(grade, subject, book, task):
-    lol = os.listdir(r'static\img\tasks\пятьбунимович')
-    lol = sorted(lol, key=lambda x: int("".join([i for i in x if i.isdigit()])))
+    tasks = os.listdir(os.path.join(THIS_FOLDER, r'static/img/tasks/'+book))
+    tasks = sorted(tasks, key=lambda x: int("".join([i for i in x if i.isdigit()])))
     if re.match(r"\d[0,1]?-klass", grade) and subject in subjects.keys():
         try:
             book_info = Books.query.filter_by(id_=book).first()
             if book_info:
                 return render_template('task.html',
                                        page_title=f"Задание {task}.  {book_info.author}.  {subjects[subject][-1]}:  {grade[:-6]}  класс",
-                                       book_info=book_info,
                                        task_num=task,
-                                       path=r'static\img\tasks\пятьбунимович',
-                                       lol=lol,
-                                       url=f'/{grade}/{subject}/{book}/{task}',
-                                       len=len(lol),
-                                       book=book_info.author,
+                                       url=f'/{grade}/{subject}/{book}',
+                                       book_author=book_info.author,
+                                       book_id=book_info.id_,
                                        grade=grade[:-6],
-                                       task=task,
                                        subject=subjects[subject][-1],
+                                       len=len(tasks),
+                                       tasks=tasks
                                        )
 
         except Exception as e:

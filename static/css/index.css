@@ -53,7 +53,11 @@
     }
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 755px) {
+=======
+@media screen and (max-width: 710px) {
+>>>>>>> fdc99889714577b0e8448c9748814777f7bd5991
     .left-column {
         display: inline-block;
         width: 100%;

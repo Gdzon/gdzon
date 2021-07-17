@@ -1,4 +1,3 @@
-
 $( function() {
     $( "ul.nav" ).accordion({
         heightStyle: "content",

@@ -1,20 +1,13 @@
 .task-img {
     width: 100%;
-<<<<<<< HEAD
-=======
     border: 1px solid red;
->>>>>>> cbf4fcae9304d629bfe1879c85b6562b2b15ada4
 }
 
 #bookTitle {
     padding: 6px 10px 6px 10px;
     border-radius: 4px;
     margin: 0 0 16px 0;
-<<<<<<< HEAD
-    font-size: 18px;
-=======
     font-size: 100%;
->>>>>>> cbf4fcae9304d629bfe1879c85b6562b2b15ada4
     box-shadow: 0 0 10px rgba(0,0,0,0.22);
     text-align: center;
 }
@@ -23,9 +16,6 @@
     text-align: center;
 }
 
-<<<<<<< HEAD
-.button {
-=======
 .path {
     color: #7400E8;
     font-size: 14px;
@@ -39,7 +29,6 @@
 }
 
 .button_mini {
->>>>>>> cbf4fcae9304d629bfe1879c85b6562b2b15ada4
     margin-right: 6px;
     font-weight: 900;
     background-color: white;
@@ -50,23 +39,6 @@
     text-decoration: none;
     display: inline-block;
     border-radius: 4px;
-<<<<<<< HEAD
-    font-size: 15px;
-    font-family: Rubik;
-    cursor: pointer;
-}
-
-.path {
-    color: #7400E8;
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.text {
-    text-align: left;
-    font-weight: 400;
-
-=======
     font-size: 14px;
     font-family: Rubik;
     cursor: pointer;
@@ -93,14 +65,11 @@
     font-size: 14px;
     font-family: Rubik;
     cursor: pointer;
->>>>>>> cbf4fcae9304d629bfe1879c85b6562b2b15ada4
 }
 
 .button:hover {
     background-color: #7400E8;
     color: white;
-<<<<<<< HEAD
-=======
 }
 
 @media screen and (max-width: 765px) {
@@ -127,6 +96,4 @@
     .button_mini {
         display: inline-block;
     }
-
->>>>>>> cbf4fcae9304d629bfe1879c85b6562b2b15ada4
 }

@@ -146,6 +146,17 @@ header a{
     width: calc(100% - 240px);
 }
 
+.path {
+    color: #7400E8;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.text {
+    text-align: left;
+    font-weight: 400;
+}
+
 .left-column-and-content {
     width: 98%;
 }

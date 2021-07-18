@@ -11,18 +11,6 @@
     text-align: center;
 }
 
-.path {
-    color: #7400E8;
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.text {
-    text-align: left;
-    font-weight: 400;
-
-}
-
 .button_mini {
     margin-right: 6px;
     font-weight: 900;
@@ -78,10 +66,6 @@
 
     #bookTitle {
         font-size: 80%;
-    }
-
-    .text {
-
     }
 
     .button {

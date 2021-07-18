@@ -46,17 +46,6 @@
     margin-left: 2%;
 }
 
-.path {
-    color: #7400E8;
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.text {
-    text-align: left;
-    font-weight: 400;
-}
-
 #books-list-title{
     padding: 6px 10px 6px 10px;
     border-radius: 4px;
@@ -74,9 +63,6 @@
 
 .bookPubH p{
     margin: 0;
-}
-
-.content {
 }
 
 @media screen and (max-width: 930px) {

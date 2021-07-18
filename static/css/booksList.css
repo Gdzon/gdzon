@@ -1,8 +1,3 @@
-.books {
-    border: 1px solid red;
-    width: calc(100% - 240px);
-}
-
 #books-list {
     padding-inline-start: 0;
     height: max-content;
@@ -82,18 +77,6 @@
 }
 
 .content {
-}
-
-@media screen and (max-width: 1275px) {
-    .books {
-        width: calc(100% - 160px);
-    }
-}
-
-@media screen and (max-width: 1165px) {
-    .books {
-        width: 100%;
-    }
 }
 
 @media screen and (max-width: 930px) {

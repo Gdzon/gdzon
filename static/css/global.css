@@ -1,4 +1,3 @@
-
 body {
     /*  блок расположен: base.html
         стили для задания фонового цвета для всего сайта и подключения фоновой картинки с кружочками
@@ -141,6 +140,12 @@ header a{
 
 }
 
+.main-content {
+    text-align: center;
+    border: 1px solid red;
+    width: calc(100% - 240px);
+}
+
 .left-column-and-content {
     width: 98%;
 }
@@ -223,11 +228,19 @@ ul.nav li > ul > li > a:hover {
     .text {
         font-size: 90%;
     }
+
+    .main-content {
+        width: calc(100% - 160px);
+    }
 }
 
 @media screen and (max-width: 1165px) {
     .ad {
         display: none;
+    }
+
+    .main-content {
+        width: 100%;
     }
 }
 

@@ -1,6 +1,6 @@
 .tasks {
     border: 1px solid red;
-    width: 75%;
+    width: calc(100% - 240px);
 }
 
 #bookTitle {
@@ -87,6 +87,18 @@
 .test:hover {
     background: #7400E8;
     color: white;
+}
+
+@media screen and (max-width: 1275px) {
+    .tasks {
+        width: calc(100% - 160px);
+    }
+}
+
+@media screen and (max-width: 1165px) {
+    .tasks {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 755px) {

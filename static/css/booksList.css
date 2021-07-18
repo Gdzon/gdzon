@@ -1,7 +1,6 @@
-
 .books {
     border: 1px solid red;
-    width: 75%;
+    width: calc(100% - 240px);
 }
 
 #books-list {
@@ -83,6 +82,18 @@
 }
 
 .content {
+}
+
+@media screen and (max-width: 1275px) {
+    .books {
+        width: calc(100% - 160px);
+    }
+}
+
+@media screen and (max-width: 1165px) {
+    .books {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 930px) {

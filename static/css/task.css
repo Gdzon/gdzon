@@ -14,7 +14,7 @@
 .all {
     text-align: center;
     border: 1px solid red;
-    width: 75%;
+    width: calc(100% - 240px);
 }
 
 .path {
@@ -71,6 +71,18 @@
 .button:hover {
     background-color: #7400E8;
     color: white;
+}
+
+@media screen and (max-width: 1275px) {
+    .all {
+        width: calc(100% - 160px);
+    }
+}
+
+@media screen and (max-width: 1165px) {
+    .all {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 765px) {

@@ -1,31 +1,5 @@
 .task-img {
     width: 100%;
-    border: 1px solid red;
-}
-
-#bookTitle {
-    padding: 6px 10px 6px 10px;
-    border-radius: 4px;
-    margin: 0 0 16px 0;
-    font-size: 100%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.22);
-    text-align: center;
-}
-
-.all {
-    text-align: center;
-}
-
-.path {
-    color: #7400E8;
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.text {
-    text-align: left;
-    font-weight: 400;
-
 }
 
 .button_mini {
@@ -83,10 +57,6 @@
 
     #bookTitle {
         font-size: 80%;
-    }
-
-    .text {
-
     }
 
     .button {

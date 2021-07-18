@@ -9,8 +9,8 @@
 {% block content %}
     {{ super() }}
 
-    <div class="books">
-        <p id="books-list-title">{{ page_title }}</p>
+    <div class="main-content">
+        <p class="main-title">{{ page_title }}</p>
 
         <p class="text"><a class="path" href="/">Главная</a>/<a class="path" href={{ url }}>{{ ru_subject + " " + grade + " класс "}}</a></p>
 

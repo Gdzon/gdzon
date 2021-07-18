@@ -1,9 +1,3 @@
-
-.books {
-    border: 1px solid red;
-    width: 100%;
-}
-
 #books-list {
     padding-inline-start: 0;
     height: max-content;
@@ -52,26 +46,6 @@
     margin-left: 2%;
 }
 
-.path {
-    color: #7400E8;
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.text {
-    text-align: left;
-    font-weight: 400;
-}
-
-#books-list-title{
-    padding: 6px 10px 6px 10px;
-    border-radius: 4px;
-    margin: 0 0 0 0;
-    font-size: 18px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.22);
-    text-align: center;
-}
-
 .bookPubH {
     text-decoration: none;
     opacity: 60%;
@@ -80,9 +54,6 @@
 
 .bookPubH p{
     margin: 0;
-}
-
-.content {
 }
 
 @media screen and (max-width: 930px) {

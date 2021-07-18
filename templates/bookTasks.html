@@ -10,8 +10,8 @@
 {% block content %}
     {{ super() }}
 
-    <div class="tasks">
-        <p id="bookTitle">{{page_title}}</p>
+    <div class="main-content">
+        <p class="main-title">{{page_title}}</p>
 
         <p class="text"><a class="path" href="/">Главная</a>/<a class="path" href={{ url[:url.rfind('/')] }}>{{ subject + " " + grade + " класс "}}</a>/<a class="path" href={{ url }}>{{ book }}</a></p>
 

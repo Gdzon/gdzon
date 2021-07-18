@@ -124,7 +124,7 @@ header a{
     float: right;
     margin-left: 10px;
 
-    border: 1px solid purple;
+    /*border: 1px solid purple;*/
 }
 
 .content {
@@ -133,7 +133,7 @@ header a{
     height: max-content;
 
     position: relative;
-    border: 1px solid green;
+    /*border: 1px solid green;*/
 
     display: flex;
     justify-content: space-between;
@@ -142,7 +142,7 @@ header a{
 
 .main-content {
     text-align: center;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     width: calc(100% - 240px);
 }
 
@@ -180,7 +180,7 @@ header a{
     box-shadow: 0 0px 10px rgba(0,0,0,0.22);
     border-radius: 4px;
 
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
 }
 
 .left-column-list{
@@ -241,6 +241,7 @@ ul.nav li > ul > li > a:hover {
     .logo {
         width: 24%;
     }
+
     .path {
         font-size: 90%;
     }

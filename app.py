@@ -59,6 +59,8 @@ def show_task(grade, subject, book, task):
 
 @app.route('/<grade>/<subject>/<book>')
 def book_tasks(grade, subject, book):
+    tasks = os.listdir(os.path.join(THIS_FOLDER, r'static/img/tasks/' + book))
+    tasks = sorted(tasks, key=lambda x: int("".join([i for i in x if i.isdigit()])))
     if re.match(r"\d[0,1]?-klass", grade) and subject in subjects.keys():
         try:
             book_info = Books.query.filter_by(id_=book).first()
@@ -73,6 +75,7 @@ def book_tasks(grade, subject, book):
                                        book=book_info.author,
                                        grade=grade[:-6],
                                        subject=subjects[subject][-1],
+                                       len=len(tasks)
                                        )
             else:
                 abort(404)

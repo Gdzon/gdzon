@@ -1,4 +1,3 @@
-
 import os, re
 from sqlalchemy import text
 from models import Books, db, addBook
@@ -15,11 +14,13 @@ app.config['SECRET_KEY'] = 'wefhiu42h5ui43h534uth3u4itbger'
 db.init_app(app)
 THIS_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)))
 
+
 # app.ROUTE decorators
 
 @app.context_processor
 def base_vars():
     return dict(subjects=subjects, Books=Books)
+
 
 @app.route('/')
 def index():
@@ -30,14 +31,15 @@ def index():
 
 @app.route('/<grade>/<subject>/<book>/<int:task>')
 def show_task(grade, subject, book, task):
-    tasks = os.listdir(os.path.join(THIS_FOLDER, r'static/img/tasks/'+book))
+    tasks = os.listdir(os.path.join(THIS_FOLDER, r'static/img/tasks/' + book))
     tasks = sorted(tasks, key=lambda x: int("".join([i for i in x if i.isdigit()])))
     if re.match(r"\d[0,1]?-klass", grade) and subject in subjects.keys():
         try:
             book_info = Books.query.filter_by(id_=book).first()
             if book_info:
                 return render_template('task.html',
-                                       page_title=f"Задание {task}.  {book_info.author}.  {subjects[subject][-1]}:  {grade[:-6]}  класс",
+                                       page_title=f"Задание {task}.  {book_info.author}.  {subjects[subject][-1]}:  "
+                                                  f"{grade[:-6]}  класс",
                                        task_num=task,
                                        url=f'/{grade}/{subject}/{book}',
                                        book_author=book_info.author,
@@ -93,7 +95,7 @@ def table_to_books(grade, subject):
                                    books_list=books_list,
                                    grade=grade,
                                    subject=subject,
-                                   ru_subject = subjects[subject][-1],
+                                   ru_subject=subjects[subject][-1],
                                    url=f'/{str(grade) + "-klass"}/{subject}',
                                    )
         except Exception as e:
@@ -117,17 +119,19 @@ def admin():
 
     return render_template("admin.html", page_title="Админка")
 
+
 @app.route('/lol')
 def lol():
     return render_template("lol.html", page_title="Админка")
 
+
 subjects = {"Класс": ["Класс"],
-    "maths": ["Математика"], "algebra": ["Алгебра"],
-    "geometries": ["Геометрия"], "english": ["Английский"],
-    "nemeckiy": ["Немецкий"], "phisic": ["Физика"],
-    "him": ["Химия"], "biolog": ["Биология"],
-    "geography": ["География"], "history": ["История"],
-    "information": ["Информатика"], "literature": ["Литература"]}
+            "maths": ["Математика"], "algebra": ["Алгебра"],
+            "geometries": ["Геометрия"], "english": ["Английский"],
+            "nemeckiy": ["Немецкий"], "phisic": ["Физика"],
+            "him": ["Химия"], "biolog": ["Биология"],
+            "geography": ["География"], "history": ["История"],
+            "information": ["Информатика"], "literature": ["Литература"]}
 
 if __name__ == '__main__':
     app.run(debug=True)

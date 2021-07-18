@@ -1,6 +1,5 @@
 .task-img {
     width: 100%;
-    border: 1px solid red;
 }
 
 #bookTitle {
@@ -14,6 +13,8 @@
 
 .all {
     text-align: center;
+    border: 1px solid red;
+    width: 75%;
 }
 
 .path {

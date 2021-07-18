@@ -146,6 +146,15 @@ header a{
     width: calc(100% - 240px);
 }
 
+.main-title {
+    padding: 6px 10px 6px 10px;
+    border-radius: 4px;
+    margin: 0 0 16px 0;
+    font-size: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.22);
+    text-align: center;
+}
+
 .path {
     color: #7400E8;
     font-size: 14px;

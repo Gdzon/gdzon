@@ -2,15 +2,6 @@
     width: 100%;
 }
 
-#bookTitle {
-    padding: 6px 10px 6px 10px;
-    border-radius: 4px;
-    margin: 0 0 16px 0;
-    font-size: 100%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.22);
-    text-align: center;
-}
-
 .button_mini {
     margin-right: 6px;
     font-weight: 900;

@@ -46,15 +46,6 @@
     margin-left: 2%;
 }
 
-#books-list-title{
-    padding: 6px 10px 6px 10px;
-    border-radius: 4px;
-    margin: 0 0 0 0;
-    font-size: 18px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.22);
-    text-align: center;
-}
-
 .bookPubH {
     text-decoration: none;
     opacity: 60%;

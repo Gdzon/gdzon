@@ -1,24 +1,18 @@
 #indexTable {
-    width: 40%;
+    width: 700px;
+    height: 600px;
     text-align: center;
     border-collapse: separate;
     border-spacing: 0 0px;
     color: white;
-    text-align: center;
     box-shadow: 0 0px 10px rgba(0,0,0,0.22);
     border-radius: 4px;
     margin: 0 auto;
 }
 
-.subject-name {
+.indexTable-th {
     text-align: center;
     background-color: #7400E8;
-    padding: 10px 30px 10px 30px;
-}
-
-.subject-name-class {
-    text-align: center;
-    color: #7400E8;
     padding: 10px 30px 10px 30px;
 }
 
@@ -42,9 +36,6 @@
 }
 
 @media screen and (max-width: 1275px) {
-    #indexTable {
-        width: 80%;
-    }
 }
 
 @media screen and (max-width: 930px) {
@@ -53,11 +44,7 @@
     }
 }
 
-<<<<<<< HEAD
 @media screen and (max-width: 755px) {
-=======
-@media screen and (max-width: 710px) {
->>>>>>> fdc99889714577b0e8448c9748814777f7bd5991
     .left-column {
         display: inline-block;
         width: 100%;

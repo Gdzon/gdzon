@@ -46,8 +46,16 @@
                 });
             </script>
 
-        <div class="ttt">
-            {% for i in range(1, 55) %}
+        <div>
+            <form onsubmit="open_task(event)" id="open-task">
+                <p id="open-task-text">Быстрый поиск </p>
+            <p id="open-task-input-and-button"><input id="open-task-input" type="search" name="ot" placeholder="5">
+               <input id="open-task-button" type="submit" value="->"></p>
+        </form>
+        </div>
+
+        <div id="task-buttons">
+            {% for i in range(1, len + 1) %}
                 <a class="test" href={{ url_for('show_task', grade=book_info.grade+"-klass", subject=book_info.subject, book=book_info.id_, task=i) }}><span class="pt">{{i}}</span></a>
             {% endfor %}
         </div>

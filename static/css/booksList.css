@@ -13,7 +13,8 @@
     flex-basis: 7.5%;
     height: 120px;
     overflow: hidden;
-    margin: 0 10px 20px 0;
+    padding: 0 0 10px 0;
+    margin: 0 10px 10px 0;
     min-width: 48%;
     color: #7400E8;
     border-radius: 4px;

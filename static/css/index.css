@@ -10,6 +10,11 @@
     margin: 0 auto;
 }
 
+#klass {
+    background-color: white;
+    color: #7400E8;
+}
+
 .indexTable-th {
     text-align: center;
     background-color: #7400E8;

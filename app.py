@@ -26,7 +26,7 @@ def base_vars():
 def index():
     # db.drop_all()
     # db.create_all()
-    return render_template('index.html', title="hello!", subjects=subjects, page_title="ГДЗон", grade=0)
+    return render_template('index.html', title="hello!", subjects=subjects, page_title="GDZon", grade=0)
 
 
 @app.route('/<grade>/<subject>/<book>/<int:task>')
@@ -118,11 +118,6 @@ def admin():
             flash('Ошибка отправки', category='error')
 
     return render_template("admin.html", page_title="Админка")
-
-
-@app.route('/lol')
-def lol():
-    return render_template("lol.html", page_title="Админка")
 
 
 subjects = {"Класс": ["Класс"],

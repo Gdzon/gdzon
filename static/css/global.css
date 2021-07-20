@@ -6,7 +6,6 @@ body {
     background-color: #7400E8;
     background-size: 100%;
     z-index: 6; /* Зачем? */
-    position: relative; /* Зачем?*/
 
     font-family: 'Rubik', sans-serif;
     font-weight: 900;
@@ -24,7 +23,7 @@ html {
 .left-column-and-content {
     text-align: center;
     display: inline-block;
-    margin: auto;
+    margin-top: auto;
 }
 
 .body-div{
@@ -34,7 +33,7 @@ html {
     z-index: 3;
     width: 96%;
 
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 20px;
     box-shadow: 0 0px 10px rgba(0,0,0,0.22);
     padding-top: 1px;
@@ -53,18 +52,27 @@ footer {
 
 header {
     margin: auto;
-    margin-bottom: 10px;
     margin-top: 10px;
+    margin-bottom: 10px;
     height: 60px;
     width: 98%;
 
     display: flex;
     position: relative;
+
     background: white;
 
     top: 0;     /* Уточнить что это?*/
     box-shadow: 0 0px 10px rgba(0,0,0,0.22);
     border-radius: 4px;
+}
+
+.fixed {
+    margin-top: 0;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    width: 100%;
 }
 
 header a{
@@ -287,10 +295,6 @@ ul.nav li > ul > li > a:hover {
     .logo {
         width: 100%;
     }
-
-    header {
-        width: 97%;
-    }
 }
 
 @media screen and (max-width: 755px) {
@@ -300,10 +304,6 @@ ul.nav li > ul > li > a:hover {
 
     .left-column-list {
         width: 100%;
-    }
-
-    header {
-        width: 96%;
     }
 
     .text {

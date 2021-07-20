@@ -50,6 +50,15 @@ footer {
     display: flex;
 }
 
+.open-nav-button {
+    background-size: 100%;
+    background-image: url("../img/menu.png");
+    width: 60px;
+    height: 60px;
+    border-width: 0;
+    display: none;
+}
+
 header {
     margin: auto;
     margin-top: 10px;
@@ -191,6 +200,12 @@ header a{
     /*border: 1px solid blue;*/
 }
 
+.left-column-show {
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+}
+
 .left-column-list{
     list-style-type: none;
     padding-inline-start: 0;
@@ -294,6 +309,7 @@ ul.nav li > ul > li > a:hover {
 
     .logo {
         width: 100%;
+        z-index: 10;
     }
 }
 

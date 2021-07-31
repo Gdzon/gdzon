@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block add_head %}
+    {{ super() }}
+
+    <link type="text/css" href="{{ url_for('static', filename='css/task.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+    {{ super() }}
+
+    <div class="main-content">
+        <p class="main-title">{{ page_title }}</p>
+
+        <p class="text">
+            <a class="path" href="/">Главная</a>/
+            <a class="path" href={{ '/'+grade+'/'+subject }}>{{ subject + " " + grade + " класс "}}</a>/
+            <a class="path" href={{ url }}>{{ book_author }}</a>/
+            <a class="path" href={{ url+'/'+task_num.__str__() }}>{{"Номер " + task_num.__str__() }}</a>
+        </p>
+
+        <img id="bookCover" alt="{{ book_info.id_ }}" src="{{ url_for('static', filename='img/covers/') }}{{ book_info.id_ }}.jpg">
+
+        <div class="description">
+            <p><label class="bookDescriptionFirst"> {{ ' '.join(book_info.description.split()[:115]) }}<label class="dots">...</label> </label>
+            <label class="bookDescriptionSecond"> {{ ' '.join(book_info.description.split()[115:]) }} </label>
+            <b class="spoiler-title">🡆</b>
+        </div>
+        <div class="mini-description">
+            <p><label class="bookDescriptionFirst"> {{ ' '.join(book_info.description.split()[:80]) }}<label class="dots">...</label> </label>
+            <label class="bookDescriptionSecond"> {{ ' '.join(book_info.description.split()[80:]) }} </label>
+            <b class="spoiler-title">🡆</b>
+        </div>
+
+            <script type="text/javascript">
+                $(document).ready(function(){
+                $('.spoiler-title').click(function(){
+                    $(this).toggleClass('opened').toggleClass('closed').next().toggle();
+                    if($(this).hasClass('opened')) {
+                        $(this).html('🡄');
+                        $('.bookDescriptionSecond').show();
+                        $('.dots').hide();
+                    }
+                    else {
+                        $(this).html('🡆');
+                        $('.bookDescriptionSecond').hide();
+                        $('.dots').show();
+                    }
+                });
+                });
+            </script>
+
+        <img class="task-img" alt="{{ task_num.__str__() }}" src="{{ url_for('static', filename='img/tasks/' + book_id + '/' + tasks[task_num-1]) }}">
+
+        <div class="buttons_next">
+            {% if task_num != 1 and task_num != len %}
+                <p><a class="button" href={{url + "/" + (task_num - 1).__str__()}}>🡄 Предыдущий номер</a>
+                    <a class="button" href={{url + "/" + (task_num + 1).__str__()}}>Следующий номер 🡆</a>
+
+                <p><a class="button_mini" href={{url + "/" + (task_num - 1).__str__()}}>🡄</a>
+                <a class="button_mini" href={{url + "/" + (task_num + 1).__str__()}}>🡆</a>
+            {% endif %}
+            {% if task_num == 1 %}
+                <p><a class="button" href={{url + "/" + (task_num + 1).__str__()}}>Следующий номер 🡆</a>
+
+                <p><a class="button_mini" href={{url + "/" + (task_num + 1).__str__()}}>🡆</a>
+
+            {% endif %}
+            {% if task_num == len %}
+                <p><a class="button" href={{url + "/" + (task_num - 1).__str__()}}>🡄 Предыдущий номер</a>
+
+                <p><a class="button_mini" href={{url + "/" + (task_num - 1).__str__()}}>🡄</a>
+            {% endif %}
+        </div>
+
+    </div>
+
+{% endblock %}

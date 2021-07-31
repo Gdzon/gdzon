@@ -1,0 +1,73 @@
+.task-img {
+    width: 100%;
+}
+
+.button_mini {
+    margin-right: 6px;
+    font-weight: 900;
+    background-color: white;
+    border: 2.5px solid #7400E8;
+    color: #7400E8;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: Rubik;
+    cursor: pointer;
+
+    display: none;
+}
+
+.button_mini:hover {
+    background-color: #7400E8;
+    color: white;
+}
+
+.button {
+    margin-right: 6px;
+    font-weight: 900;
+    background-color: white;
+    border: 2.5px solid #7400E8;
+    color: #7400E8;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: Rubik;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #7400E8;
+    color: white;
+}
+
+@media screen and (max-width: 930px) {
+    .open-nav-button {
+        z-index: 15;
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 690px) {
+
+    .content {
+        display: block;
+    }
+
+    #bookTitle {
+        font-size: 80%;
+    }
+
+    .button {
+        display: none;
+    }
+
+    .button_mini {
+        display: inline-block;
+    }
+}

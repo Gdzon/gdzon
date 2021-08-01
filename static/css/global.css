@@ -15,11 +15,6 @@ body {
     margin: auto;
 }
 
-html {
-    width:100vw;
-    overflow-x:hidden;
-}
-
 .left-column-and-content {
     text-align: center;
     display: inline-block;
@@ -48,6 +43,10 @@ footer {
     margin-bottom: -55px;
     width: 100%;
     display: flex;
+}
+
+.ya-share2 {
+    margin: auto 0 auto 1%;
 }
 
 .open-nav-button {
@@ -313,9 +312,9 @@ ul.nav li > ul > li > a:hover {
     }
 }
 
-@media screen and (max-width: 755px) {
+@media screen and (max-width: 690px) {
     .left-column-and-content {
-        width: 95%;
+        width: 98%;
     }
 
     .left-column-list {
@@ -329,4 +328,28 @@ ul.nav li > ul > li > a:hover {
     .path {
         font-size: 80%;
     }
+}
+
+.description {
+    color: dimgray;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.mini-description {
+    color: dimgray;
+    font-weight: 400;
+    display: none;
+    text-align: justify;
+}
+
+.spoiler-title {
+    cursor: pointer;
+}
+
+#bookCover {
+    width: 90px;
+    height: 120px;
+    float: left;
+    margin-right: 16px;
 }

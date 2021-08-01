@@ -47,7 +47,9 @@ def show_task(grade, subject, book, task):
                                        grade=grade[:-6],
                                        subject=subjects[subject][-1],
                                        len=len(tasks),
-                                       tasks=tasks
+                                       tasks=tasks,
+                                       book_info=book_info,
+                                       book=book_info.author
                                        )
 
         except Exception as e:

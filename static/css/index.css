@@ -37,10 +37,7 @@
 }
 
 .be:hover {
-    filter: brightness(90%);
-}
-
-@media screen and (max-width: 1275px) {
+    filter: brightness(80%);
 }
 
 @media screen and (max-width: 930px) {
@@ -49,7 +46,7 @@
     }
 }
 
-@media screen and (max-width: 755px) {
+@media screen and (max-width: 690px) {
     .left-column {
         display: inline-block;
         width: 100%;
@@ -57,6 +54,6 @@
     }
 
     .content {
-        display: none
+        display: none;
     }
 }

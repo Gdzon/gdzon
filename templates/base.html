@@ -48,7 +48,7 @@
                                 {% endif %}
                                 {% for subject in subjects %}
                                 {% if Books.query.filter_by(subject=subject, grade=form).first() %}
-                                <li><a href="{{ url_for('table_to_books', grade=form.__str__()+" -klass",
+                                <li><a href="{{ url_for('table_to_books', grade=form.__str__()+"-klass",
                                     subject=subject) }}">{{subjects[subject][-1]}}</a>
                                 </li>
                                 {% endif %}

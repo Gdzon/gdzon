@@ -29,13 +29,17 @@ $(window).scroll(function () {
 });
 
 $(function () {
-    $(".open-nav-button").click(function () {
-        if ($(".left-column").hasClass("left-column-show")) {
-            $(".left-column").removeClass("left-column-show");
-            $(".content").css("display", "flex");
-        } else {
-            $(".content").css("display", "none");
-            $(".left-column").addClass("left-column-show");
-        }
+    $(".open-nav-button").click(function (){
+        $(this).toggleClass('opened').toggleClass('closed').next().toggle();
+            if($(this).hasClass('opened')) {
+                $('.content').hide();
+                $('.left-column').show().css("width", "100%");
+                $('.logo').show();
+            }
+            else {
+                $('.content').show();
+                $('.left-column').hide();
+                $('.logo').show();
+            }
     });
 });

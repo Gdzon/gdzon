@@ -36,7 +36,7 @@
 }
 
 @media screen and (max-width: 930px) {
-    .open-nav-button {
+    .nav-button {
         z-index: 15;
         display: flex;
     }

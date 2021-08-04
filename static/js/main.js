@@ -29,17 +29,15 @@ $(window).scroll(function () {
 });
 
 $(function () {
-    $(".open-nav-button").click(function (){
-        $(this).toggleClass('opened').toggleClass('closed').next().toggle();
-            if($(this).hasClass('opened')) {
-                $('.content').hide();
-                $('.left-column').show().css("width", "100%");
-                $('.logo').show();
-            }
-            else {
-                $('.content').show();
-                $('.left-column').hide();
-                $('.logo').show();
-            }
+    $(".nav-button").click(function (){
+        $(this).toggleClass('nav-btn-open').toggleClass('nav-btn-close').next().toggle();
+        $('.left-column').toggleClass('left-column-btn-opened').next().toggle();
+        if($('.left-column').hasClass('.left-column-btn-opened')){
+            $('.content').hide();
+        }
+        else{
+            $('.content').show();
+        }
+        $('.logo').show();
     });
 });

@@ -73,9 +73,16 @@ footer {
     margin: auto 0 auto 1%;
 }
 
-.open-nav-button {
-    background-size: 100%;
+.nav-btn-open {
     background-image: url("../img/menu.png");
+}
+
+.nav-btn-close {
+    background-image: url("../img/close_menu.png");
+}
+
+.nav-button {
+    background-size: 100%;
     width: 42px;
     height: 42px;
     margin: auto 0 auto 12px;
@@ -225,12 +232,6 @@ header a{
     /*border: 1px solid blue;*/
 }
 
-.left-column-show {
-    display: inline-block;
-    width: 100%;
-    margin: auto;
-}
-
 .left-column-list{
     list-style-type: none;
     padding-inline-start: 0;
@@ -315,6 +316,11 @@ ul.nav li > ul > li > a:hover {
 @media screen and (max-width: 930px) {
     .left-column {
         display: none;
+    }
+
+    .left-column-btn-opened {
+        display: inline-block;
+        width: 100%;
     }
 
     .content {

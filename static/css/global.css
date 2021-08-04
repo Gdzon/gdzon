@@ -2,10 +2,8 @@ body {
     /*  блок расположен: base.html
         стили для задания фонового цвета для всего сайта и подключения фоновой картинки с кружочками
         Здесь задается общий шрифт для всего сайта по умолчанию (а зачем?)*/
-    background: url('../img/circles.svg');
     background-color: #7400E8;
     background-size: 100%;
-    z-index: 6; /* Зачем? */
 
     font-family: 'Rubik', sans-serif;
     font-weight: 900;
@@ -15,10 +13,36 @@ body {
     margin: auto;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: silver;
+}
+
 .left-column-and-content {
     text-align: center;
     display: inline-block;
     margin-top: auto;
+}
+
+.down {
+    border: solid #7400E8;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    float: right;
+    margin-top: 6px;
 }
 
 .body-div{
@@ -30,7 +54,7 @@ body {
 
     margin-top: 30px;
     margin-bottom: 20px;
-    box-shadow: 0 0px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 0 10px rgba(0,0,0,0.22);
     padding-top: 1px;
 }
 
@@ -52,9 +76,12 @@ footer {
 .open-nav-button {
     background-size: 100%;
     background-image: url("../img/menu.png");
-    width: 60px;
-    height: 60px;
+    width: 42px;
+    height: 42px;
+    margin: auto 0 auto 12px;
     border-width: 0;
+    background-color: white;
+    cursor: pointer;
     display: none;
 }
 
@@ -81,6 +108,7 @@ header {
     z-index: 1000;
     left: 0;
     width: 100%;
+    border-radius: 0px;
 }
 
 header a{
@@ -139,7 +167,6 @@ header a{
     height: 600px;
     float: right;
     margin-left: 10px;
-
     /*border: 1px solid purple;*/
 }
 
@@ -153,7 +180,6 @@ header a{
 
     display: flex;
     justify-content: space-between;
-
 }
 
 .main-content {
@@ -229,12 +255,11 @@ ul.nav a:hover {
 }
 
 ul.nav a {
-  padding: 10px 30px;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  display: block;
-  color: #7400E8;
+    padding: 10px 30px;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    color: #7400E8;
 }
 
 ul.nav li > ul > li > a {

@@ -91,6 +91,7 @@ def book_tasks(grade, subject, book):
 
 @app.route("/<grade>/<subject>")
 def table_to_books(grade, subject):
+    print(grade)
     if re.match(r"\d[0,1]?-klass", grade) and subject in subjects.keys():
         try:
             grade = str(grade[:len(grade) - 6])

@@ -52,26 +52,41 @@
         <img class="task-img" alt="{{ task_num.__str__() }}" src="{{ url_for('static', filename='img/tasks/' + book_id + '/' + tasks[task_num-1]) }}">
 
         <div class="buttons_next">
-            {% if task_num != 1 and task_num != len %}
-                <p><a class="button" href={{url + "/" + (task_num - 1).__str__()}}>🡄 Предыдущий номер</a>
-                    <a class="button" href={{url + "/" + (task_num + 1).__str__()}}>Следующий номер 🡆</a>
-
-                <p><a class="button_mini" href={{url + "/" + (task_num - 1).__str__()}}>🡄</a>
-                <a class="button_mini" href={{url + "/" + (task_num + 1).__str__()}}>🡆</a>
+            {% if task_num > 2 and task_num < len - 1 %}
+                <p><a class="button" href={{url + "/" + (task_num - 2).__str__()}}>{{ task_num - 2 }}</a>
+                    <a class="button" href={{url + "/" + (task_num - 1).__str__()}}>{{ task_num - 1 }}</a>
+                    <a class="not-button" href={{url + "/" + (task_num).__str__()}}>{{ task_num }}</a>
+                    <a class="button" href={{url + "/" + (task_num + 1).__str__()}}>{{ task_num + 1 }}</a>
+                    <a class="button" href={{url + "/" + (task_num + 2).__str__()}}>{{ task_num + 2 }}</a>
             {% endif %}
+
             {% if task_num == 1 %}
-                <p><a class="button" href={{url + "/" + (task_num + 1).__str__()}}>Следующий номер 🡆</a>
-
-                <p><a class="button_mini" href={{url + "/" + (task_num + 1).__str__()}}>🡆</a>
-
+                <p><a class="not-button" href={{url + "/" + (task_num).__str__()}}>{{ task_num }}</a>
+                    <a class="button" href={{url + "/" + (task_num + 1).__str__()}}>{{ task_num + 1 }}</a>
+                    <a class="button" href={{url + "/" + (task_num + 2).__str__()}}>{{ task_num + 2 }}</a>
             {% endif %}
+
+            {% if task_num == 2 %}
+                <p><a class="button" href={{url + "/" + (task_num - 1).__str__()}}>{{ task_num - 1 }}</a>
+                    <a class="not-button" href={{url + "/" + (task_num).__str__()}}>{{ task_num }}</a>
+                    <a class="button" href={{url + "/" + (task_num + 1).__str__()}}>{{ task_num + 1 }}</a>
+                    <a class="button" href={{url + "/" + (task_num + 2).__str__()}}>{{ task_num + 2 }}</a>
+            {% endif %}
+
             {% if task_num == len %}
-                <p><a class="button" href={{url + "/" + (task_num - 1).__str__()}}>🡄 Предыдущий номер</a>
-
-                <p><a class="button_mini" href={{url + "/" + (task_num - 1).__str__()}}>🡄</a>
+                <p><a class="button" href={{url + "/" + (task_num - 2).__str__()}}>{{ task_num - 2 }}</a>
+                    <a class="button" href={{url + "/" + (task_num - 1).__str__()}}>{{ task_num - 1 }}</a>
+                    <a class="not-button" href={{url + "/" + (task_num).__str__()}}>{{ task_num }}</a>
             {% endif %}
-        </div>
 
+            {% if task_num == (len - 1) %}
+                <p><a class="button" href={{url + "/" + (task_num - 2).__str__()}}>{{ task_num - 2 }}</a>
+                    <a class="button" href={{url + "/" + (task_num - 1).__str__()}}>{{ task_num - 1 }}</a>
+                    <a class="not-button" href={{url + "/" + (task_num).__str__()}}>{{ task_num }}</a>
+                    <a class="button" href={{url + "/" + (task_num + 1).__str__()}}>{{ task_num + 1 }}</a>
+            {% endif %}
+
+        </div>
     </div>
 
 {% endblock %}

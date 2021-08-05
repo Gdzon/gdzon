@@ -30,9 +30,9 @@ $(window).scroll(function () {
 
 $(function () {
     $(".nav-button").click(function (){
-        $(this).toggleClass('nav-btn-open').toggleClass('nav-btn-close').next().toggle();
+        $(this).toggleClass('nav-btn-opened').toggleClass('nav-btn-closed').next().toggle();
         $('.left-column').toggleClass('left-column-btn-opened').next().toggle();
-        if($('.left-column').hasClass('.left-column-btn-opened')){
+        if($('.nav-button').hasClass('nav-btn-opened')){
             $('.content').hide();
         }
         else{

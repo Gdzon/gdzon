@@ -73,11 +73,11 @@ footer {
     margin: auto 0 auto 1%;
 }
 
-.nav-btn-open {
+.nav-btn-closed {
     background-image: url("../img/menu.png");
 }
 
-.nav-btn-close {
+.nav-btn-opened {
     background-image: url("../img/close_menu.png");
 }
 

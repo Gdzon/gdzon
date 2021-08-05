@@ -20,12 +20,12 @@
         <div class="description">
             <p><label class="bookDescriptionFirst"> {{ ' '.join(book_info.description.split()[:115]) }}<label class="dots">...</label> </label>
             <label class="bookDescriptionSecond"> {{ ' '.join(book_info.description.split()[115:]) }} </label>
-            <b class="spoiler-title">🡆</b>
+            <b class="spoiler-title">>></b>
         </div>
         <div class="mini-description">
             <p><label class="bookDescriptionFirst"> {{ ' '.join(book_info.description.split()[:80]) }}<label class="dots">...</label> </label>
             <label class="bookDescriptionSecond"> {{ ' '.join(book_info.description.split()[80:]) }} </label>
-            <b class="spoiler-title">🡆</b>
+            <b class="spoiler-title"><<</b>
         </div>
 
             <script type="text/javascript">
@@ -33,12 +33,12 @@
                 $('.spoiler-title').click(function(){
                     $(this).toggleClass('opened').toggleClass('closed').next().toggle();
                     if($(this).hasClass('opened')) {
-                        $(this).html('🡄');
+                        $(this).html('<<');
                         $('.bookDescriptionSecond').show();
                         $('.dots').hide();
                     }
                     else {
-                        $(this).html('🡆');
+                        $(this).html('>>');
                         $('.bookDescriptionSecond').hide();
                         $('.dots').show();
                     }

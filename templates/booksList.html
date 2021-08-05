@@ -12,7 +12,8 @@
     <div class="main-content">
         <p class="main-title">{{ page_title }}</p>
 
-        <p class="text"><a class="path" href="/">Главная</a>/<a class="path" href={{ url }}>{{ ru_subject + " " + grade + " класс "}}</a></p>
+        <p class="text"><a class="path" href="/">Главная</a>/
+            <a class="path" href={{ url }}>{{ ru_subject + " " + grade + " класс "}}</a></p>
 
         <ul id="books-list">
             {% for book in books_list %}

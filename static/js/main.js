@@ -41,3 +41,10 @@ $(function () {
         $('.logo').show();
     });
 });
+
+$(window).resize(function () {
+    var width = $(document).width();
+    if (width > 930) {
+        $('.content').show();
+    }
+});

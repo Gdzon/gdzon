@@ -34,15 +34,31 @@ body {
     margin-top: auto;
 }
 
-.down {
+.nav-arrow {
     border: solid #7400E8;
     border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 2px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
     float: right;
     margin-top: 6px;
+}
+.ui-state-active .nav-arrow {
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.ui-state-active {
+    color: white;
+    background-color: #7400E8;
+}
+
+ul.nav a:hover .nav-arrow {
+    border: solid white;
+    border-width: 0 2px 2px 0;
 }
 
 .body-div{
@@ -260,14 +276,20 @@ ul.nav a {
     text-decoration: none;
     cursor: pointer;
     display: block;
-    color: #7400E8;
 }
 
 ul.nav li > ul > li > a {
     text-align: center;
+    font-size: 14px;
+    font-weight: 600;
     background-color: #5B00B6;
     color: white;
     margin: 0 0 0 -40px;
+}
+
+ul.nav li > ul > li {
+    width: 86%;
+    margin-left: 7%;
 }
 
 ul.nav li > ul > li > a:hover {

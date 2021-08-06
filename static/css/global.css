@@ -264,6 +264,7 @@ ul.nav {
 ul.nav ul {
     display: none;
     list-style: none;
+    padding-inline-start: 0;
 }
 
 ul.nav a:hover {
@@ -272,7 +273,6 @@ ul.nav a:hover {
 }
 
 ul.nav a {
-    padding: 10px 30px;
     text-decoration: none;
     cursor: pointer;
     display: block;
@@ -284,10 +284,18 @@ ul.nav li > ul > li > a {
     font-weight: 600;
     background-color: #5B00B6;
     color: white;
-    margin: 0 0 0 -40px;
+    height: 100%;
+    padding-top: 8px;
+    box-sizing: border-box;
 }
 
 ul.nav li > ul > li {
+    width: 84%;
+    margin-left: 8%;
+    height: 37px;
+}
+ul.nav > li > a {
+    padding: 12px 30px;
 }
 
 ul.nav li > ul > li > a:hover {

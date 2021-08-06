@@ -7,6 +7,7 @@ $(function () {
 });
 
 $(document).ready(function () {
+    $('.ui-state-active').removeClass('ui-state-active');
     var index = $('ul.nav').find('ul');
     for (var j = 0; j < index.length; j++) {
         if (index[j].classList.contains('nav-klass-active')) {

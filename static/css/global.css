@@ -313,7 +313,7 @@ ul.nav li > ul > li > a:hover {
     }
 }
 
-@media screen and (max-width: 1290px) {
+@media screen and (max-width: 1230px) {
     .ad {
         display: none;
     }
@@ -339,7 +339,7 @@ ul.nav li > ul > li > a:hover {
     }
 }
 
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 1020px) {
     .mini-ad {
         display: none;
     }
@@ -349,7 +349,15 @@ ul.nav li > ul > li > a:hover {
     }
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 800px) {
+    .header {
+        width: 96%;
+    }
+
+    .left-column-and-content {
+        width: 96%;
+    }
+
     .left-column {
         display: none;
     }
@@ -380,10 +388,6 @@ ul.nav li > ul > li > a:hover {
 }
 
 @media screen and (max-width: 690px) {
-    .left-column-and-content {
-        width: 98%;
-    }
-
     .left-column-list {
         width: 100%;
     }

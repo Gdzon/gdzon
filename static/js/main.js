@@ -8,7 +8,7 @@ $(function () {
 
 $(document).ready(function () {
     $('html, body').animate({
-        scrollTop: $('.description').offset().top
+        scrollTop: 130
     }, 100);
     $('.ui-state-active').removeClass('ui-state-active');
     var index = $('ul.nav').find('ul');

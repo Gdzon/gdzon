@@ -185,11 +185,19 @@ header a{
 }
 
 .ad {
-    width: 240px;
+    width: 300px;
     height: 600px;
     float: right;
     margin-left: 10px;
     /*border: 1px solid purple;*/
+}
+
+.mini-ad {
+    display: none;
+    width: 160px;
+    height: 600px;
+    float: right;
+    margin-left: 10px;
 }
 
 .content {
@@ -289,8 +297,6 @@ ul.nav li > ul > li > a {
 }
 
 ul.nav li > ul > li {
-    width: 84%;
-    margin-left: 8%;
     height: 37px; /* высота элемента меню */
 }
 ul.nav > li > a {
@@ -307,10 +313,13 @@ ul.nav li > ul > li > a:hover {
     }
 }
 
-@media screen and (max-width: 1275px) {
+@media screen and (max-width: 1290px) {
     .ad {
-        width: 160px;
-        height: 600px;
+        display: none;
+    }
+
+    .mini-ad {
+        display: inline-block;
     }
 
     .logo {
@@ -330,8 +339,8 @@ ul.nav li > ul > li > a:hover {
     }
 }
 
-@media screen and (max-width: 1165px) {
-    .ad {
+@media screen and (max-width: 1110px) {
+    .mini-ad {
         display: none;
     }
 

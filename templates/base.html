@@ -22,6 +22,8 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;900&display=swap');
+
+
     </style>
 
 </head>
@@ -37,6 +39,7 @@
                                                    placeholder="Русский язык 5 класс">
                 <input id="search-button" type="submit" value="Найти"></p>
         </form>
+
     </header>
 
     <div class="left-column-and-content">
@@ -44,7 +47,7 @@
             <ul class="left-column-list">
                 <ul class="nav">
                     {% for form in ['1','2','3','4','5','6','7','8','9','10','11'] %}
-                        <li><a>{{form.__str__() + " класс"}}<i class="nav-arrow"></i></a>
+                    <li><a>{{form.__str__() + " класс"}}<i class="nav-arrow"></i></a>
                         {% if form == grade %}
                         <ul class="nav-klass-active">
                             {% else %}
@@ -52,7 +55,7 @@
                                 {% endif %}
                                 {% for subject in subjects %}
                                 {% if Books.query.filter_by(subject=subject, grade=form).first() %}
-                                <li><a href="{{ url_for('table_to_books', grade=form.__str__()+"-klass",
+                                <li><a href="{{ url_for('table_to_books', grade=form.__str__()+" -klass",
                                     subject=subject) }}">{{subjects[subject][-1]}}</a>
                                 </li>
                                 {% endif %}
@@ -76,9 +79,10 @@
     </div>
 
     <footer>
-        <div class="ya-share2" data-curtain data-services="vkontakte,facebook,odnoklassniki,telegram,twitter,viber,whatsapp"
-        data-description="Лучшее ГДЗ в мире! с:"
-        data-image="https://icdn.lenta.ru/images/2021/04/27/16/20210427163138131/square_320_c09ebae17387b7d6eeb9fa0d42afe5ee.jpg"></div>
+        <div class="ya-share2" data-curtain
+             data-services="vkontakte,facebook,odnoklassniki,telegram,twitter,viber,whatsapp"
+             data-description="Лучшее ГДЗ в мире! с:"
+             data-image="https://icdn.lenta.ru/images/2021/04/27/16/20210427163138131/square_320_c09ebae17387b7d6eeb9fa0d42afe5ee.jpg"></div>
     </footer>
 
 

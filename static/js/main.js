@@ -20,7 +20,7 @@ $(document).ready(function () {
 
 $(window).scroll(function () {
     var top = $(document).scrollTop();
-    if (top < 105) {
+    if (top < 14) {
         $(".header").removeClass('fixed');
         $('.left-column-and-content').css('padding-top', '0')
     } else {

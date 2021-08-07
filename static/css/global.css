@@ -319,7 +319,7 @@ ul.nav li > ul > li > a:hover {
     }
 
     .mini-ad {
-        display: inline-block;
+        display: block;
     }
 
     .logo {

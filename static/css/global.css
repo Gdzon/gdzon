@@ -25,7 +25,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: silver;
+    background-color: #5E00BB;
 }
 
 .left-column-and-content {

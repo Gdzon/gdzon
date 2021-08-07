@@ -24,6 +24,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;900&display=swap');
 
 
+
+
     </style>
 
 </head>
@@ -55,7 +57,7 @@
                                 {% endif %}
                                 {% for subject in subjects %}
                                 {% if Books.query.filter_by(subject=subject, grade=form).first() %}
-                                <li><a href="{{ url_for('table_to_books', grade=form.__str__()+"-klass",
+                                <li><a href="{{ url_for('table_to_books', grade=form.__str__()+" -klass",
                                     subject=subject) }}">{{subjects[subject][-1]}}</a>
                                 </li>
                                 {% endif %}
@@ -83,10 +85,11 @@
     </div>
 
     <footer>
-        <div class="ya-share2" data-curtain
+        <div class="ya-share2" data-curtain data-shape="round"
              data-services="vkontakte,facebook,odnoklassniki,telegram,twitter,viber,whatsapp"
              data-description="Лучшее ГДЗ в мире! с:"
-             data-image="https://icdn.lenta.ru/images/2021/04/27/16/20210427163138131/square_320_c09ebae17387b7d6eeb9fa0d42afe5ee.jpg"></div>
+             data-image="https://icdn.lenta.ru/images/2021/04/27/16/20210427163138131/square_320_c09ebae17387b7d6eeb9fa0d42afe5ee.jpg">
+        </div>
     </footer>
 
 

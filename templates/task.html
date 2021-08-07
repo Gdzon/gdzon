@@ -70,7 +70,9 @@
                 <p><a class="button" href={{url + "/" + (task_num - 1).__str__()}}>{{ task_num - 1 }}</a>
                     <a class="not-button" href={{url + "/" + (task_num).__str__()}}>{{ task_num }}</a>
                     <a class="button" href={{url + "/" + (task_num + 1).__str__()}}>{{ task_num + 1 }}</a>
+                {% if len > 3 %}
                     <a class="button" href={{url + "/" + (task_num + 2).__str__()}}>{{ task_num + 2 }}</a>
+                {% endif %}
             {% endif %}
 
             {% if task_num == len %}
@@ -79,7 +81,7 @@
                     <a class="not-button" href={{url + "/" + (task_num).__str__()}}>{{ task_num }}</a>
             {% endif %}
 
-            {% if task_num == (len - 1) %}
+            {% if task_num == (len - 1) and task_num != 2 %}
                 <p><a class="button" href={{url + "/" + (task_num - 2).__str__()}}>{{ task_num - 2 }}</a>
                     <a class="button" href={{url + "/" + (task_num - 1).__str__()}}>{{ task_num - 1 }}</a>
                     <a class="not-button" href={{url + "/" + (task_num).__str__()}}>{{ task_num }}</a>

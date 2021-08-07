@@ -2,7 +2,7 @@ body {
     /*  блок расположен: base.html
         стили для задания фонового цвета для всего сайта и подключения фоновой картинки с кружочками
         Здесь задается общий шрифт для всего сайта по умолчанию (а зачем?)*/
-    background-color: #7400E8;
+    background-color: #F6ECFF;
     background-size: 100%;
 
     font-family: 'Rubik', sans-serif;
@@ -18,14 +18,14 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: white;
+    background-color: #7400E8;
     border-radius: 20px;
     border: 2px solid transparent;
     background-clip: content-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: silver;
+    background-color: #5E00BB;
 }
 
 .left-column-and-content {
@@ -66,16 +66,15 @@ ul.nav a:hover .nav-arrow {
     background: white;
 
     z-index: 3;
-    width: 96%;
+    width: 100%;
 
-    margin-top: 30px;
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.22);
     padding-top: 1px;
 }
 
 footer {
-    height: 55px;
+    height: 80px;
     background: whitesmoke;
 
     bottom: 0;

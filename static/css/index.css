@@ -1,5 +1,5 @@
 #indexTable {
-    width: 700px;
+    width: 500px;
     height: 600px;
     text-align: center;
     border-collapse: separate;
@@ -24,7 +24,7 @@
 .form-num {
     text-align: center;
     background-color: #7400E8;
-    padding: 10px 15px 10px 15px;
+    padding: 10px 14px 10px 14px;
 }
 
 .dot {
@@ -38,12 +38,6 @@
 
 .be:hover {
     filter: brightness(80%);
-}
-
-@media screen and (max-width: 930px) {
-    #indexTable {
-        width: 500px;
-    }
 }
 
 @media screen and (max-width: 660px) {

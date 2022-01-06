@@ -62,7 +62,7 @@ def show_task(grade, subject, book, task):
 @app.route('/<grade>/<subject>/<book>')
 def book_tasks(grade, subject, book):
     tasks = os.listdir(os.path.join(THIS_FOLDER, r'static/img/tasks/' + book))
-    tasks = sorted(tasks, key=lambda x: int("".join([i for i in x if i.isdigit()])))
+    tasks = sorted(tasks, key=lambda x: int("".join([i for i in x if i.isdigit()])))         # ОБРАЩАТЬСЯ К БАЗЕ ДАННЫХ
     if re.match(r"\d[0,1]?-klass", grade) and subject in subjects.keys():
         try:
             book_info = Books.query.filter_by(id_=book).first()
@@ -99,6 +99,7 @@ def table_to_books(grade, subject):
             return render_template('booksList.html',
                                    page_title=f"{subjects[subject][-1]}: {grade} класс",
                                    books_list=books_list,
+                                   start_book=books_list[0],
                                    grade=grade,
                                    subject=subject,
                                    ru_subject=subjects[subject][-1],

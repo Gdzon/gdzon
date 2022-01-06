@@ -6,6 +6,10 @@ $(function () {
     });
 });
 
+function standby(a, b) {
+    document.getElementsByClassName('bookCover')[a-b].src = "../static/img/covers/ifnotbook.svg";}
+
+
 $(document).ready(function () {
     $('html, body').animate({
         scrollTop: 0

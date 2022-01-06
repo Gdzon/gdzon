@@ -18,7 +18,7 @@
         <ul id="books-list">
             {% for book in books_list %}
                 <a class="book" href="{{ url_for('book_tasks', grade=grade+"-klass", subject=subject, book=book.id_) }}">
-                    <p><img class="bookCover" alt="" src="{{ url_for('static', filename='img/covers/'+book.id_) }}.jpg"></p>
+                    <p><img class="bookCover" src="{{ url_for('static', filename='img/covers/'+book.id_) }}.jpg" onerror="standby({{ book.id_ }}, {{ start_book.id_ }} )"></p>
 
                     <div class="bookInfo">
                         <p class="bookAuthor">{{ book.author }}</p>

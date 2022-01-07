@@ -18,7 +18,7 @@
         <img id="bookCover" alt="{{ book_info.id_ }}" src="{{ url_for('static', filename='img/covers/') }}{{ book_info.id_ }}.jpg">
 
         <div class="description">
-            <p><label class="bookDescriptionFirst"> {{ ' '.join(book_info.description.split()[:115]) }}<label class="dots">...</label> </label>
+            <p><label class="bookDescriptionFirst"> {{ ' '.join(book_info.description.split()[:11пше 5]) }}<label class="dots">...</label> </label>
             <label class="bookDescriptionSecond"> {{ ' '.join(book_info.description.split()[115:]) }} </label>
             <b class="spoiler-title">>></b>
         </div>

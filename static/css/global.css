@@ -11,6 +11,9 @@ body {
 
     text-align: center;
     margin: auto;
+
+    overflow-y: scroll;
+    scrollbar-color: #7400E8 #5E00BB;
 }
 
 ::-webkit-scrollbar {

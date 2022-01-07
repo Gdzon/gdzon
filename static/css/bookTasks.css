@@ -90,15 +90,10 @@
     color: white;
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 800px){
     .nav-button {
-        z-index: 15;
         display: flex;
-    }
-
-    .logo {
-        margin-left: -54px;
-    }
+        }
 }
 
 @media screen and (max-width: 690px) {

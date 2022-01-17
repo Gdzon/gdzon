@@ -125,6 +125,13 @@ def admin():
     return render_template("admin.html", page_title="Админка")
 
 
+@app.route('/404')
+def not_found():
+    # db.drop_all()
+    # db.create_all()
+    return render_template('404.html', page_title="404")
+
+
 subjects = {"Класс": ["Класс"],
             "maths": ["Математика"], "algebra": ["Алгебра"],
             "geometries": ["Геометрия"], "english": ["Английский"],

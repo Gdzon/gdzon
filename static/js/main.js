@@ -9,6 +9,11 @@ $(function () {
 function standby(a, b) {
     document.getElementsByClassName('bookCover')[a-b].src = "../static/img/covers/ifnotbook.svg";}
 
+function dump() {
+    document.getElementById('bookCover').src = "../../static/img/covers/ifnotbook.svg";}
+
+function dumb() {
+    document.getElementById('bookCover').src = "../../../static/img/covers/ifnotbook.svg";}
 
 $(document).ready(function () {
     $('html, body').animate({

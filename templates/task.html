@@ -18,7 +18,7 @@
             <a class="path" href={{ url }}>{{ book_author }}</a>/
             <a class="path" href={{ url+'/'+task_num.__str__() }}>{{"Номер " + task_num.__str__() }}</a>
         </p>
-        <img id="bookCover" alt="{{ book_info.id_ }}" src="{{ url_for('static', filename='img/covers/') }}{{ book_info.id_ }}.jpg">
+        <img id="bookCover" alt="{{ book_info.id_ }}" src="{{ url_for('static', filename='img/covers/') }}{{ book_info.id_ }}.jpg" onerror="dumb()">
 
         <div class="description">
             <p><label class="bookDescriptionFirst"> {{ ' '.join(book_info.description.split()[:115]) }}<label class="dots">...</label> </label>

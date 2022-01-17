@@ -241,6 +241,10 @@ header a{
     font-weight: 400;
 }
 
+.bookDescriptionSecond {
+    display: none;
+}
+
 .left-column-and-content {
     width: 98%;
 }

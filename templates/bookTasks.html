@@ -15,7 +15,7 @@
 
         <p class="text"><a class="path" href="/">Главная</a>/<a class="path" href={{ url[:url.rfind('/')] }}>{{ subject + " " + grade + " класс "}}</a>/<a class="path" href={{ url }}>{{ book }}</a></p>
 
-        <img id="bookCover" alt="{{ book_info.id_ }}" src="{{ url_for('static', filename='img/covers/') }}{{ book_info.id_ }}.jpg">
+        <img id="bookCover" alt="{{ book_info.id_ }}" src="{{ url_for('static', filename='img/covers/') }}{{ book_info.id_ }}.jpg" onerror="dump()" width="1000" height="1000">
 
         <div class="description">
             <p><label class="bookDescriptionFirst"> {{ ' '.join(book_info.description.split()[:115]) }}<label class="dots">...</label> </label>
